@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TeamHNJ.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TeamHNJ.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/food/DrinkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/mcdonalds/food/DrinkTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,7 @@
         <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -36,13 +38,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.mcdonalds.food" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/mcdonalds/images" />
     </key>
@@ -98,10 +108,10 @@
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state x="446" y="160" width="800" height="717" key="#Intentions/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1588971802948" />
-    <state x="334" y="109" key="#Project_Structure" timestamp="1589213350138">
+    <state x="334" y="109" key="#Project_Structure" timestamp="1589218270720">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
-    <state x="334" y="109" key="#Project_Structure/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589213350138" />
+    <state x="334" y="109" key="#Project_Structure/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589218270720" />
     <state x="405" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589213173201">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
@@ -119,10 +129,10 @@
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state x="678" y="333" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589213134782" />
-    <state x="684" y="228" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1589210825305">
+    <state x="684" y="228" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1589218269006">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
-    <state x="684" y="228" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589210825305" />
+    <state x="684" y="228" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589218269006" />
     <state x="645" y="267" key="ConfigureClientPropertiesDialog" timestamp="1588973367894">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -155,6 +165,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="707" y="326" key="UIDesigner.ListEditorDialog/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588972655086" />
+    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589218168281">
+      <screen x="0" y="23" width="1680" height="943" />
+    </state>
+    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589218168281" />
     <state x="59" y="176" key="new project wizard" timestamp="1589210952778">
       <screen x="0" y="23" width="1680" height="943" />
     </state>

@@ -26,9 +26,8 @@ public class Drink extends Food {
 
     @Override
     public void setSize(Size size) {
-        size = size; 
+        size = size;
     }
-
 
     @Override
     public Double setPrice() {
@@ -65,6 +64,5 @@ public class Drink extends Food {
         priceMap.put(DrinkType.WATER, 50.0);
         priceMap.put(DrinkType.ADULT_BEVERAGE, 2.0);
     }
-
 }
 

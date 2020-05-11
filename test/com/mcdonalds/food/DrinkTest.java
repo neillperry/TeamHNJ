@@ -1,4 +1,13 @@
 package com.mcdonalds.food;
 
-public class DrinkTest {
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+class DrinkTest {
+
+
+
+
+
+
 }
