@@ -92,7 +92,7 @@ public class OrderForm extends JFrame {
         *     updateAllPrices(newOrder.calculatePrice());
         *
         *   3. Create an instance of user
-        * 
+        *
         *
         * */
     }
