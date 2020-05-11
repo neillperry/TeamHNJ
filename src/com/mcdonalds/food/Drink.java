@@ -7,7 +7,7 @@ public class Drink extends FoodItem {
     private Double price;
     private Size size;
 
-    Drink(DrinkType type, Size size) {
+    public Drink(DrinkType type, Size size) {
         setSize(size);
         setType(type);
         price = type.price() * size.multiplier();

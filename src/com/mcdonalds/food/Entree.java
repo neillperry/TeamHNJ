@@ -7,7 +7,7 @@ public class Entree extends FoodItem {
     private Size size;
 
 
-    Entree(EntreeType type, Size size) {
+    public Entree(EntreeType type, Size size) {
         setType(type);
         setSize(size);
         price = type.price() * size.multiplier();

@@ -8,7 +8,7 @@ public class Side extends FoodItem {
     private Size size;
     private Double price;
 
-    Side(SideType type, Size size) {
+    public Side(SideType type, Size size) {
         setType(type);
         setSize(size);
         price = type.price() * size.multiplier();

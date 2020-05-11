@@ -55,4 +55,8 @@ public class Order {
             totalPrice += food.getPrice();
         }
     }
+
+    public void addFoodItem(FoodItem food) {
+        foodItems.add(food);
+    }
 }

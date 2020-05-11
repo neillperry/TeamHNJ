@@ -7,7 +7,7 @@ public class Dessert extends FoodItem {
     private Double price;
     private Size size;
 
-    Dessert(DessertType type, Size size) {
+    public Dessert(DessertType type, Size size) {
         setType(type);
         setSize(size);
         price = type.price() * size.multiplier();

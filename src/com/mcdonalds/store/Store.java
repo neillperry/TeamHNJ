@@ -46,4 +46,7 @@ public class Store {
         completedOrders.add(order);
     }
 
+    public void addNewOrder(Order newOrder) {
+        placedOrders.add(newOrder);
+    }
 }
