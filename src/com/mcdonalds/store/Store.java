@@ -10,6 +10,7 @@ public class Store {
     // FIELDS
     private Collection<Order> orders;
     private Collection<User> users;
+    private Double collectedSalesTaxes = 0.0;
 
     // CONSTRUCTOR
     Store() {

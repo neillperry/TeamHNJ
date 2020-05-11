@@ -1,5 +1,6 @@
 package com.mcdonalds.order;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import com.mcdonalds.user.User;
 import com.mcdonalds.store.Store;
@@ -17,7 +18,8 @@ public class Order {
     Order(Store store, User customer){
         setMainStore(store);
         setCustomer(customer);
-        orderNumber = setOrderNumber(); 
+        foodItems = new ArrayList<>() {};
+        orderNumber = setOrderNumber();
     }
 
     public void setMainStore(Store mainStore) {
