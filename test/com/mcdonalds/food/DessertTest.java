@@ -3,13 +3,16 @@ package com.mcdonalds.food;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
-import com.mcdonalds.food.Dessert.DessertType;
+import com.mcdonalds.food.DessertType;
 import com.mcdonalds.food.Size;
 
 public class DessertTest extends TestCase {
 
     @Test
     public void testGetType() {
+        DesertType cookie = new DessertType(DessertType.COOKIE, Size.LARGE);
+
+        
         Dessert cookie = new Dessert(DessertType.COOKIE, Size.LARGE);
         Dessert applePie = new Dessert(DessertType.APPLE_PIE, Size.REGULAR);
         Dessert taterTots = new Dessert(DessertType.FROSTED_TATER_TOTS, Size.SMALL);

@@ -3,16 +3,15 @@ package com.mcdonalds.food;
 
 import java.util.HashMap;
 
-public class Drink extends Food {
+public class Drink extends FoodItem {
     private DrinkType type;
     private Double price;
     private Size size;
-    private static HashMap<DrinkType, Double> priceMap;
 
     Drink(DrinkType type, Size size) {
         setSize(size);
         setType(type);
-        price = calculatePrice(size);
+        setPrice();
     }
 
     public void setType(DrinkType type) {
@@ -28,38 +27,14 @@ public class Drink extends Food {
     }
 
     public void setSize(Size size) {
-        size = size;
+        size = type.size();
     }
+
+    public void setPrice() { price = type.price(); }
 
     public Double getPrice() {
         return price;
     }
 
-    @Override
-    public Double calculatePrice(Size size) {
-        switch(size) {
-            case SMALL:
-                return 1.0 * priceMap.get(getType());
-            case REGULAR:
-                return 1.5 * priceMap.get(getType());
-            case LARGE:
-                return 2.0 * priceMap.get(getType());
-            default:
-                return 2.0 * priceMap.get(getType());
-        }
-    }
-
-    public static enum DrinkType {
-        COKE, SPRITE, DIET_COKE, WATER, ADULT_BEVERAGE
-    }
-
-    static {
-        priceMap = new HashMap<DrinkType, Double>();
-        priceMap.put(DrinkType.COKE, 10.0);
-        priceMap.put(DrinkType.DIET_COKE, 10.0);
-        priceMap.put(DrinkType.SPRITE, 10.0);
-        priceMap.put(DrinkType.WATER, 50.0);
-        priceMap.put(DrinkType.ADULT_BEVERAGE, 2.0);
-    }
 }
 

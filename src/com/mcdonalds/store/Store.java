@@ -1,10 +1,15 @@
 package com.mcdonalds.store;
 
+import com.mcdonalds.food.EntreeType;
+import com.mcdonalds.food.SideType;
+import com.mcdonalds.food.DrinkType;
+import com.mcdonalds.food.DessertType;
 import com.mcdonalds.order.Order;
 import com.mcdonalds.user.User;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 
 public class Store {
     // STATIC VARIABLES

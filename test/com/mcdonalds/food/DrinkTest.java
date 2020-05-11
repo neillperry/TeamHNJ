@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import static com.mcdonalds.food.Size.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import com.mcdonalds.food.Drink.DrinkType;
+import com.mcdonalds.food.DrinkType;
 
 public class DrinkTest extends TestCase {
 

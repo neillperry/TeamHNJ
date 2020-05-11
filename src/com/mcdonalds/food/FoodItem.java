@@ -4,7 +4,9 @@ import java.util.HashMap;
 
 public abstract class FoodItem {
     private Double price;
+    private Size size;
 
-    public abstract Double calculatePrice(Size size);
-
+    public Double getPrice() {
+        return price;
+    }
 }

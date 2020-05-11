@@ -1,26 +1,26 @@
 package com.mcdonalds.food;
 
 import java.util.HashMap;
+import com.mcdonalds.food.SideType.*;
 
 public class Side extends FoodItem {
     private SideType type;
-    private Double price;
     private Size size;
-    private static HashMap<SideType, Double> priceMap;
+    private Double price;
 
-
-    Side(SideType type, Size size) {
-        setSize(size);
+    Side(SideType type) {
         setType(type);
-        price = calculatePrice(size);
+        setSize();
+        price = getPrice();
     }
 
+    // ACCESSOR  / METHODS
     public Size getSize() {
-        return size;
+        return type.size();
     }
 
-    public void setSize(Size size) {
-        size = size;
+    public void setSize() {
+        size = type.size();
     }
 
     public SideType getType() {
@@ -31,34 +31,5 @@ public class Side extends FoodItem {
         this.type = type;
     }
 
-    public Double getPrice() { return price; }
-
-    @Override
-    public Double calculatePrice(Size size) {
-        switch(size) {
-            case SMALL:
-                return 1.0 * priceMap.get(getType());
-            case REGULAR:
-                return 1.5 * priceMap.get(getType());
-            case LARGE:
-                return 2.0 * priceMap.get(getType());
-            default:
-                return 2.0 * priceMap.get(getType());
-        }
-    }
-
-
-    public static enum SideType {
-        FRIES, APPLE, MOZZARELLA_STICKS, SALAD, ONION_RINGS, MYSTERY
-    }
-
-    static {
-        priceMap = new HashMap<SideType, Double>();
-        priceMap.put(SideType.FRIES, 2.0);
-        priceMap.put(SideType.APPLE, 8.0);
-        priceMap.put(SideType.MOZZARELLA_STICKS, 3.0);
-        priceMap.put(SideType.SALAD, 2000.0);
-        priceMap.put(SideType.ONION_RINGS, 3.0);
-        priceMap.put(SideType.MYSTERY, 1.0);
-    }
+    public Double getPrice() { return type.price(); }
 }

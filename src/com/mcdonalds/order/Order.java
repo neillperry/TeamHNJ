@@ -43,12 +43,16 @@ public class Order {
         return totalPrice;
     }
 
-    // BUSINESS METHODS
 
+    // BUSINESS METHODS
     public int setOrderNumber() {
         Random r = new Random();
         return r.nextInt((999999999-1)+1) + 0;
     }
 
-
+    public void calculateTotalPrice() {
+        for (FoodItem food : foodItems) {
+            totalPrice += food.getPrice();
+        }
+    }
 }
