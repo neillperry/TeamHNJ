@@ -1,39 +1,45 @@
 package com.mcdonalds.food;
 
 import junit.framework.TestCase;
+
+import static com.mcdonalds.food.Size.SMALL;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 import com.mcdonalds.food.Drink.DrinkType;
+import com.mcdonalds.food.Size;
 
 public class DrinkTest extends TestCase {
-
-    @Before
-    
 
     @Test
     public void testGetType() {
         Drink testCoke = new Drink(DrinkType.COKE, Size.LARGE);
-        assertEquals(testCoke.getSize(), Size.LARGE);
+        Drink testSprite = new Drink(DrinkType.SPRITE, Size.REGULAR);
+        Drink testAdult = new Drink(DrinkType.ADULT_BEVERAGE, SMALL);
+        assertEquals(DrinkType.COKE, testCoke.getType());
+        assertEquals(DrinkType.ADULT_BEVERAGE, testAdult.getType());
+        assertEquals(DrinkType.SPRITE, testSprite.getType());
     }
 
-    public void testGetSize() {
-        Drink testCoke = new Drink(DrinkType.COKE, Size.LARGE);
-        assertEquals(testCoke.getSize(), Size.LARGE);
-    }
-
-    public void testSetSize() {
-    }
 
     public void testCalculatePrice() {
-        Drink testCoke = new Drink(DrinkType.DIET_COKE, Size.REGULAR);
-        System.out.println(testCoke.getPrice());
-        assertEquals(testCoke.getPrice(), 15.0, 0.001);
+        Drink testDietCoke = new Drink(DrinkType.DIET_COKE, Size.LARGE);
+        Drink testWater = new Drink(DrinkType.WATER, Size.REGULAR);
+        Drink testAdult = new Drink(DrinkType.ADULT_BEVERAGE, SMALL);
+        assertEquals(20.0, testDietCoke.getPrice(), 0.001);
+        assertEquals(75.0, testWater.getPrice(), 0.001);
+        assertEquals(2.0, testAdult.getPrice(), 0.001);
     }
 
     public void testSetType() {
-        Drink testWater = new Drink(DrinkType.WATER, Size.REGULAR);
-        assertEquals(testWater.getType(), DrinkType.WATER);
+        Drink testCoke = new Drink(DrinkType.COKE, Size.LARGE);
+        Drink testSprite = new Drink(DrinkType.SPRITE, Size.LARGE);
+
+        testCoke.setType(DrinkType.DIET_COKE);
+        testSprite.setType(DrinkType.WATER);
+
+        assertEquals(DrinkType.DIET_COKE, testCoke.getType());
+        assertEquals(DrinkType.WATER, testSprite.getType());
     }
 }

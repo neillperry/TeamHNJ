@@ -19,17 +19,16 @@ public class Drink extends Food {
         return type;
     }
 
-    @Override
     public Size getSize() {
         return size;
     }
 
-    @Override
     public void setSize(Size size) {
         size = size;
     }
 
-    private Double calculatePrice(Size size) {
+    @Override
+    public Double calculatePrice(Size size) {
         switch(size) {
             case SMALL:
                 return 1.0 * priceMap.get(getType());
@@ -42,7 +41,6 @@ public class Drink extends Food {
         }
     }
 
-    @Override
     public Double getPrice() {
         return price;
     }
