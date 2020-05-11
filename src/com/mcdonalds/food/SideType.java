@@ -9,16 +9,10 @@ public enum SideType {
     MYSTERY(1.0);
 
     private Double price;
-    private Size size;
 
     SideType(final Double price) {
         this.price = price;
     }
 
-    public double price() { return price * size.multiplier(); }
-    public Size size() { return size; }
-
-    public void setSize(final Size size) {
-        this.size = size;
-    }
+    public double price() { return price; }
 }

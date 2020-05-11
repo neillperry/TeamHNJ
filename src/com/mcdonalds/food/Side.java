@@ -16,7 +16,7 @@ public class Side extends FoodItem {
 
     // ACCESSOR  / METHODS
     public Size getSize() {
-        return type.size();
+        return size;
     }
 
     public void setSize(Size size) {

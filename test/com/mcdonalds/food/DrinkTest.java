@@ -11,25 +11,23 @@ public class DrinkTest extends TestCase {
 
     @Test
     public void testGetType() {
-        Drink thing = new Drink(DrinkType.COKE, LARGE);
-        /*
         Drink testCoke = new Drink(DrinkType.COKE, Size.LARGE);
         Drink testSprite = new Drink(DrinkType.SPRITE, Size.REGULAR);
         Drink testAdult = new Drink(DrinkType.ADULT_BEVERAGE, SMALL);
-        */
-        assertEquals(DrinkType.COKE, thing.getType());
-        //assertEquals(DrinkType.ADULT_BEVERAGE, testAdult.getType());
-        //assertEquals(DrinkType.SPRITE, testSprite.getType());
+
+        assertEquals(DrinkType.COKE, testCoke.getType());
+        assertEquals(DrinkType.ADULT_BEVERAGE, testAdult.getType());
+        assertEquals(DrinkType.SPRITE, testSprite.getType());
     }
 
     @Test
-    public void testCalculatePrice() {
+    public void testGetPrice() {
         Drink testDietCoke = new Drink(DrinkType.DIET_COKE, Size.LARGE);
         Drink testWater = new Drink(DrinkType.WATER, Size.REGULAR);
         Drink testAdult = new Drink(DrinkType.ADULT_BEVERAGE, SMALL);
-        assertEquals(20.0, testDietCoke.getPrice(), 0.001);
-        assertEquals(75.0, testWater.getPrice(), 0.001);
-        assertEquals(2.0, testAdult.getPrice(), 0.001);
+        assertEquals(2.0, testDietCoke.getPrice(), 0.001);
+        assertEquals(7.5, testWater.getPrice(), 0.001);
+        assertEquals(1.0, testAdult.getPrice(), 0.001);
     }
 
     @Test
