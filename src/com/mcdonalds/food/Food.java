@@ -1,11 +1,12 @@
 package com.mcdonalds.food;
 
+import java.util.HashMap;
+
 public class Food {
-    private double price;
+    private Double price;
     private Size size;
 
-    Food(double price, Size size) {
-        setPrice(price);
+    Food(Size size) {
         setSize(size);
     }
 
@@ -13,10 +14,6 @@ public class Food {
 
     public double getPrice() {
         return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public Size getSize() {
