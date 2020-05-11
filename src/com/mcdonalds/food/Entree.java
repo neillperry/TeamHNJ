@@ -15,6 +15,28 @@ public class Entree extends Food {
         price = calculatePrice(size);
     }
 
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        size = size;
+    }
+
+    public EntreeType getType() {
+        return type;
+    }
+
+    public void setType(EntreeType type) {
+        this.type = type;
+    }
+
+    public Double getPrice() { return price; }
+
+    public static enum EntreeType {
+        HAMBURGER, CHEESEBURGER, CHICKEN_SANDWICH, CHICKEN_NUGGETS, MYSTERY
+    }
+
     @Override
     public Double calculatePrice(Size size) {
         switch(size) {
@@ -27,26 +49,6 @@ public class Entree extends Food {
             default:
                 return 2.0 * priceMap.get(getType());
         }
-    }
-
-    public EntreeType getType() {
-        return type;
-    }
-
-    public Size getSize() {
-        return size;
-    }
-
-    public void setSize(Size size) {
-        size = size;
-    }
-
-    public void setType(EntreeType type) {
-        this.type = type;
-    }
-
-    public static enum EntreeType {
-        HAMBURGER, CHEESEBURGER, CHICKEN_SANDWICH, CHICKEN_NUGGETS, MYSTERY
     }
 
     static {

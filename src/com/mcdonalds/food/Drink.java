@@ -15,6 +15,10 @@ public class Drink extends Food {
         price = calculatePrice(size);
     }
 
+    public void setType(DrinkType type) {
+        this.type = type;
+    }
+
     public DrinkType getType() {
         return type;
     }
@@ -25,6 +29,10 @@ public class Drink extends Food {
 
     public void setSize(Size size) {
         size = size;
+    }
+
+    public Double getPrice() {
+        return price;
     }
 
     @Override
@@ -39,14 +47,6 @@ public class Drink extends Food {
             default:
                 return 2.0 * priceMap.get(getType());
         }
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setType(DrinkType type) {
-        this.type = type;
     }
 
     public static enum DrinkType {
