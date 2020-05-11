@@ -7,10 +7,10 @@ public class Dessert extends FoodItem {
     private Double price;
     private Size size;
 
-    Dessert(DessertType type) {
+    Dessert(DessertType type, Size size) {
         setType(type);
-        setSize();
-        setPrice();
+        setSize(size);
+        price = type.price() * size.multiplier();
     }
 
     public DessertType getType() {
@@ -18,18 +18,16 @@ public class Dessert extends FoodItem {
     }
 
     public Size getSize() {
-        return type.size();
+        return size;
     }
 
     public Double getPrice() {
         return price;
     }
 
-    public void setSize() {
-        size = type.size();
+    public void setSize(Size size) {
+        size = size;
     }
-
-    public void setPrice() { price = type.price(); }
 
     public void setType(DessertType type) {
         this.type = type;

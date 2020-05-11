@@ -8,10 +8,10 @@ public class Side extends FoodItem {
     private Size size;
     private Double price;
 
-    Side(SideType type) {
+    Side(SideType type, Size size) {
         setType(type);
-        setSize();
-        price = getPrice();
+        setSize(size);
+        price = type.price() * size.multiplier();
     }
 
     // ACCESSOR  / METHODS
@@ -19,8 +19,8 @@ public class Side extends FoodItem {
         return type.size();
     }
 
-    public void setSize() {
-        size = type.size();
+    public void setSize(Size size) {
+        this.size = size;
     }
 
     public SideType getType() {
@@ -31,5 +31,5 @@ public class Side extends FoodItem {
         this.type = type;
     }
 
-    public Double getPrice() { return type.price(); }
+    public Double getPrice() { return price; }
 }

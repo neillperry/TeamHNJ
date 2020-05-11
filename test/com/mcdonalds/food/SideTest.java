@@ -4,7 +4,6 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 public class SideTest extends TestCase {
-
     @Test
     public void testGetType() {
         Side fries = new Side(SideType.FRIES, Size.LARGE);
@@ -40,4 +39,6 @@ public class SideTest extends TestCase {
         assertEquals(SideType.APPLE, mozzarella.getType());
         assertEquals(SideType.MOZZARELLA_STICKS, fries.getType());
     }
+
+
 }

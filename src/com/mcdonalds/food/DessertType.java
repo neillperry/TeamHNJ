@@ -8,16 +8,11 @@ public enum DessertType {
     FROSTED_TATER_TOTS(1.0);
 
     private Double price;
-    private Size size;
 
     DessertType(final Double price) {
         this.price = price;
     }
 
-    public double price() { return price * size.multiplier(); }
-    public Size size() { return size; }
+    public double price() { return price; }
 
-    public void setSize(final Size size) {
-        this.size = size;
-    }
 }

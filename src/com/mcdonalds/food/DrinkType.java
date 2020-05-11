@@ -8,16 +8,10 @@ public enum DrinkType {
     ADULT_BEVERAGE(1.0);
 
     private Double price;
-    private Size size;
 
     DrinkType(final Double price) {
         this.price = price;
     }
 
-    public double price() { return price * size.multiplier(); }
-    public Size size() { return size; }
-
-    public void setSize(final Size size) {
-        this.size = size;
-    }
+    public double price() { return price; }
 }

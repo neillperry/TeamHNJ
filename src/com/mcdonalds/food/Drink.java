@@ -1,7 +1,6 @@
 package com.mcdonalds.food;
 
-
-import java.util.HashMap;
+import com.mcdonalds.food.DrinkType;
 
 public class Drink extends FoodItem {
     private DrinkType type;
@@ -11,7 +10,7 @@ public class Drink extends FoodItem {
     Drink(DrinkType type, Size size) {
         setSize(size);
         setType(type);
-        setPrice();
+        price = type.price() * size.multiplier();
     }
 
     public void setType(DrinkType type) {
@@ -27,10 +26,8 @@ public class Drink extends FoodItem {
     }
 
     public void setSize(Size size) {
-        size = type.size();
+        this.size = size;
     }
-
-    public void setPrice() { price = type.price(); }
 
     public Double getPrice() {
         return price;
