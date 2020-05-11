@@ -15,7 +15,7 @@ public class Order {
     private int orderNumber;
 
     // CONSTRUCTOR
-    Order(Store store, User customer){
+    public Order(Store store, User customer){
         setMainStore(store);
         setCustomer(customer);
         foodItems = new ArrayList<>() {};

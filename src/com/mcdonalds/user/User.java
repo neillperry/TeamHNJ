@@ -4,7 +4,7 @@ public class User {
     private String name = "guest";
     private int age;
 
-    User(String name, int age) {
+    public User(String name, int age) {
         setAge(age);
         setName(name);
     }

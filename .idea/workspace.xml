@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/EntreeType.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/EntreeType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Side.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Side.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/SideType.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/SideType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/EntreeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/EntreeType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Side.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/SideType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/SideType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TeamHNJ/com/mcdonalds/food/DrinkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/test/TeamHNJ/com/mcdonalds/food/DrinkTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/food/DrinkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/mcdonalds/food/DrinkTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/store/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/store/StoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/mcdonalds/store/StoreTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,10 +166,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.OrderForm (1)" />
-      <item itemvalue="JUnit.DrinkTest" />
       <item itemvalue="JUnit.DrinkTest (1)" />
-      <item itemvalue="JUnit.DrinkTest.testGetType" />
+      <item itemvalue="JUnit.DrinkTest" />
       <item itemvalue="JUnit.DrinkTest.testGetPrice" />
+      <item itemvalue="JUnit.DrinkTest.testGetType" />
       <item itemvalue="JUnit.EntreeTest" />
       <item itemvalue="JUnit.SideTest" />
     </list>

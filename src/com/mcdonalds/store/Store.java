@@ -23,7 +23,7 @@ public class Store {
     private Double storeRevenue = 0.0;
 
     // CONSTRUCTOR
-    Store() {
+    public Store() {
         users = new ArrayList<>() {};
         placedOrders = new ArrayList<>() {};
         completedOrders = new ArrayList<>() {};
