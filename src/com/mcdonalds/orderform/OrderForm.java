@@ -77,8 +77,24 @@ public class OrderForm extends JFrame {
 
 
     public static void main(String[] args) {
+        // Creates the GUI interface
         OrderForm form = new OrderForm("Welcome to McDonald's!");
         form.setVisible(true);
+
+
+        /*
+        *
+        *   1. Create an instance of Store
+        *   2. Create an instance of Order
+        *
+        *     Order newOrder = new Order();
+        *
+        *     updateAllPrices(newOrder.calculatePrice());
+        *
+        *   3. Create an instance of user
+        * 
+        *
+        * */
     }
 
 
@@ -326,6 +342,7 @@ public class OrderForm extends JFrame {
             }
         });
     }
+
 
     private void updateAllPrices(double newPrice) {
         totalPrice += newPrice;

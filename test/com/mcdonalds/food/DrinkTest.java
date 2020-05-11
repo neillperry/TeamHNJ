@@ -2,13 +2,10 @@ package com.mcdonalds.food;
 
 import junit.framework.TestCase;
 
-import static com.mcdonalds.food.Size.SMALL;
+import static com.mcdonalds.food.Size.*;
 import static org.junit.Assert.*;
-
-import org.junit.Before;
 import org.junit.Test;
 import com.mcdonalds.food.Drink.DrinkType;
-import com.mcdonalds.food.Size;
 
 public class DrinkTest extends TestCase {
 
@@ -22,7 +19,7 @@ public class DrinkTest extends TestCase {
         assertEquals(DrinkType.SPRITE, testSprite.getType());
     }
 
-
+    @Test
     public void testCalculatePrice() {
         Drink testDietCoke = new Drink(DrinkType.DIET_COKE, Size.LARGE);
         Drink testWater = new Drink(DrinkType.WATER, Size.REGULAR);
@@ -32,6 +29,7 @@ public class DrinkTest extends TestCase {
         assertEquals(2.0, testAdult.getPrice(), 0.001);
     }
 
+    @Test
     public void testSetType() {
         Drink testCoke = new Drink(DrinkType.COKE, Size.LARGE);
         Drink testSprite = new Drink(DrinkType.SPRITE, Size.LARGE);

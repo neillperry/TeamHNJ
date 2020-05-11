@@ -33,10 +33,6 @@ public class Entree extends Food {
 
     public Double getPrice() { return price; }
 
-    public static enum EntreeType {
-        HAMBURGER, CHEESEBURGER, CHICKEN_SANDWICH, CHICKEN_NUGGETS, MYSTERY
-    }
-
     @Override
     public Double calculatePrice(Size size) {
         switch(size) {
@@ -51,6 +47,11 @@ public class Entree extends Food {
         }
     }
 
+
+    public static enum EntreeType {
+        HAMBURGER, CHEESEBURGER, CHICKEN_SANDWICH, CHICKEN_NUGGETS, MYSTERY
+    }
+
     static {
         priceMap = new HashMap<EntreeType, Double>();
         priceMap.put(EntreeType.HAMBURGER, 4.0);
@@ -59,5 +60,4 @@ public class Entree extends Food {
         priceMap.put(EntreeType.CHICKEN_NUGGETS, 3.0);
         priceMap.put(EntreeType.MYSTERY, 300.0);
     }
-
 }

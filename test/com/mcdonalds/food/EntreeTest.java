@@ -1,9 +1,13 @@
 package com.mcdonalds.food;
 
 import junit.framework.TestCase;
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 public class EntreeTest extends TestCase {
 
+    @Test
     public void testCalculatePrice() {
         Entree burger = new Entree(Entree.EntreeType.HAMBURGER, Size.LARGE);
         Entree cheeseBurger = new Entree(Entree.EntreeType.CHEESEBURGER, Size.REGULAR);
@@ -14,6 +18,7 @@ public class EntreeTest extends TestCase {
         assertEquals(300.0, mystery.getPrice(), 0.01);
     }
 
+    @Test
     public void testGetType() {
         Entree burger = new Entree(Entree.EntreeType.HAMBURGER, Size.LARGE);
         Entree cheeseBurger = new Entree(Entree.EntreeType.CHEESEBURGER, Size.REGULAR);
@@ -24,6 +29,7 @@ public class EntreeTest extends TestCase {
         assertEquals(Entree.EntreeType.MYSTERY, mystery.getType());
     }
 
+    @Test
     public void testSetType() {
         Entree burger = new Entree(Entree.EntreeType.HAMBURGER, Size.LARGE);
         Entree cheeseBurger = new Entree(Entree.EntreeType.CHEESEBURGER, Size.REGULAR);
