@@ -6,10 +6,7 @@ public abstract class Food {
     private Double price;
     private Size size;
 
-
     public abstract Double getPrice();
-
-    public abstract Double setPrice();
 
     public abstract Size getSize();
 

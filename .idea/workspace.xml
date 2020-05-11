@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Drink$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Drink$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Drink$DrinkType.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Drink$DrinkType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Drink.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Drink.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/food/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/TeamHNJ/com/mcdonalds/food/DrinkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/test/TeamHNJ/com/mcdonalds/food/DrinkTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/food/DessertTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/food/DrinkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/mcdonalds/food/DrinkTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/food/EntreeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/food/SideTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
       <recent name="$PROJECT_DIR$/src/com/mcdonalds/images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DrinkTest (1)">
+  <component name="RunManager" selected="JUnit.DrinkTest.testSetType">
     <configuration name="OrderForm (1)" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mcdonalds.orderform.OrderForm" />
       <module name="TeamHNJ" />
@@ -115,6 +118,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DrinkTest.testSetPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TeamHNJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcdonalds.food.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mcdonalds.food" />
+      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.food.DrinkTest" />
+      <option name="METHOD_NAME" value="testSetPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DrinkTest.testSetType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TeamHNJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcdonalds.food.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mcdonalds.food" />
+      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.food.DrinkTest" />
+      <option name="METHOD_NAME" value="testSetType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DrinkTest.testSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TeamHNJ" />
       <extension name="coverage">
@@ -137,9 +172,13 @@
       <item itemvalue="JUnit.DrinkTest" />
       <item itemvalue="JUnit.DrinkTest.testSize" />
       <item itemvalue="JUnit.DrinkTest (1)" />
+      <item itemvalue="JUnit.DrinkTest.testSetPrice" />
+      <item itemvalue="JUnit.DrinkTest.testSetType" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DrinkTest.testSetType" />
+        <item itemvalue="JUnit.DrinkTest.testSetPrice" />
         <item itemvalue="JUnit.DrinkTest (1)" />
         <item itemvalue="JUnit.DrinkTest.testSize" />
       </list>
@@ -201,26 +240,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="645" y="267" key="ConfigureClientPropertiesDialog/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973367894" />
-    <state width="1492" height="75" key="GridCell.Tab.0.bottom" timestamp="1589218902077">
+    <state width="1365" height="232" key="GridCell.Tab.0.bottom" timestamp="1589220276876">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.bottom/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846799" />
-    <state width="1492" height="75" key="GridCell.Tab.0.bottom/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589218902077" />
-    <state width="1492" height="75" key="GridCell.Tab.0.center" timestamp="1589218902076">
+    <state width="1365" height="232" key="GridCell.Tab.0.bottom/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589220276876" />
+    <state width="1365" height="232" key="GridCell.Tab.0.center" timestamp="1589220276875">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.center/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846797" />
-    <state width="1492" height="75" key="GridCell.Tab.0.center/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589218902076" />
-    <state width="1492" height="75" key="GridCell.Tab.0.left" timestamp="1589218902076">
+    <state width="1365" height="232" key="GridCell.Tab.0.center/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589220276875" />
+    <state width="1365" height="232" key="GridCell.Tab.0.left" timestamp="1589220276874">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.left/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846796" />
-    <state width="1492" height="75" key="GridCell.Tab.0.left/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589218902076" />
-    <state width="1492" height="75" key="GridCell.Tab.0.right" timestamp="1589218902077">
+    <state width="1365" height="232" key="GridCell.Tab.0.left/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589220276874" />
+    <state width="1365" height="232" key="GridCell.Tab.0.right" timestamp="1589220276875">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.right/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846798" />
-    <state width="1492" height="75" key="GridCell.Tab.0.right/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589218902077" />
+    <state width="1365" height="232" key="GridCell.Tab.0.right/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589220276875" />
     <state x="161" y="129" key="SettingsEditor" timestamp="1589213494250">
       <screen x="0" y="23" width="1680" height="943" />
     </state>

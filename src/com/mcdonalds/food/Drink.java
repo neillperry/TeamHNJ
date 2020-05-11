@@ -12,7 +12,7 @@ public class Drink extends Food {
     Drink(DrinkType type, Size size) {
         setSize(size);
         setType(type);
-        setPrice();
+        price = calculatePrice(size);
     }
 
     public DrinkType getType() {
@@ -29,9 +29,8 @@ public class Drink extends Food {
         size = size;
     }
 
-    @Override
-    public Double setPrice() {
-        switch(getSize()) {
+    private Double calculatePrice(Size size) {
+        switch(size) {
             case SMALL:
                 return 1.0 * priceMap.get(getType());
             case REGULAR:
