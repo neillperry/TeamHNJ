@@ -52,7 +52,7 @@ public class Drink extends Food {
         this.type = type;
     }
 
-    public enum DrinkType {
+    public static enum DrinkType {
         COKE, SPRITE, DIET_COKE, WATER, ADULT_BEVERAGE
     }
 
