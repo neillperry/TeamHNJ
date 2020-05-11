@@ -2,25 +2,16 @@ package com.mcdonalds.food;
 
 import java.util.HashMap;
 
-public class Food {
+public abstract class Food {
     private Double price;
     private Size size;
 
-    Food(Size size) {
-        setSize(size);
-    }
 
-    Food(){}
+    public abstract Double getPrice();
 
-    public double getPrice() {
-        return price;
-    }
+    public abstract Double setPrice();
 
-    public Size getSize() {
-        return size;
-    }
+    public abstract Size getSize();
 
-    public void setSize(Size size) {
-        this.size = size;
-    }
+    public abstract void setSize(Size size);
 }

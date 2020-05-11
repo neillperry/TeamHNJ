@@ -5,8 +5,9 @@ import java.util.HashMap;
 
 public class Drink extends Food {
     private DrinkType type;
+    private Double price;
+    private Size size;
     private static HashMap<DrinkType, Double> priceMap;
-
 
     Drink(DrinkType type, Size size) {
         setSize(size);
@@ -18,15 +19,34 @@ public class Drink extends Food {
         return type;
     }
 
+    @Override
+    public Size getSize() {
+        return size;
+    }
+
+    @Override
+    public void setSize(Size size) {
+        size = size; 
+    }
+
+
+    @Override
     public Double setPrice() {
         switch(getSize()) {
             case SMALL:
                 return 1.0 * priceMap.get(getType());
             case REGULAR:
                 return 1.5 * priceMap.get(getType());
+            case LARGE:
+                return 2.0 * priceMap.get(getType());
             default:
                 return 2.0 * priceMap.get(getType());
         }
+    }
+
+    @Override
+    public Double getPrice() {
+        return price;
     }
 
     public void setType(DrinkType type) {
