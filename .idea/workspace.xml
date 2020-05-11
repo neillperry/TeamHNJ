@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/food/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/food/Size.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +16,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -107,6 +110,11 @@
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state x="589" y="271" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1588968942626" />
+    <state x="-763" y="368" key="#com.intellij.ide.util.MemberChooser" timestamp="1589214508402">
+      <screen x="-1280" y="23" width="1280" height="1001" />
+    </state>
+    <state x="-763" y="368" key="#com.intellij.ide.util.MemberChooser/0.23.1680.943/-1280.23.1280.1001@-1280.23.1280.1001" timestamp="1589214508402" />
+    <state x="679" y="348" key="#com.intellij.ide.util.MemberChooser/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589214184081" />
     <state x="678" y="333" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589213134782">
       <screen x="0" y="23" width="1680" height="943" />
     </state>

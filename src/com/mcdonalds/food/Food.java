@@ -9,6 +9,8 @@ public class Food {
         setSize(size);
     }
 
+    Food(){}
+
     public double getPrice() {
         return price;
     }
