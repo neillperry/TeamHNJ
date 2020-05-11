@@ -8,13 +8,13 @@ import com.mcdonalds.food.FoodItem;
 import java.util.Random;
 
 public class Order {
-    public static final double TAXRATE = 20.01;
-    private User customer;
     private Store mainStore;
+    private User customer;
     private Collection<FoodItem> foodItems;
-    private Double totalPrice;
+    private Double totalPrice = 0.0;
     private int orderNumber;
 
+    // CONSTRUCTOR
     Order(Store store, User customer){
         setMainStore(store);
         setCustomer(customer);
@@ -22,6 +22,7 @@ public class Order {
         orderNumber = setOrderNumber();
     }
 
+    // ACCESSOR / SETTOR METHODS
     public void setMainStore(Store mainStore) {
         this.mainStore = mainStore;
     }
@@ -34,10 +35,19 @@ public class Order {
         this.customer = customer;
     }
 
+    public Collection<FoodItem> getFoodItems() {
+        return foodItems;
+    }
 
-    public int setOrderNumber(int min) {
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    // BUSINESS METHODS
+
+    public int setOrderNumber() {
         Random r = new Random();
-        return r.nextInt((999999999-1)+1) + min;
+        return r.nextInt((999999999-1)+1) + 0;
     }
 
 
