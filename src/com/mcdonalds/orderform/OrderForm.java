@@ -4,6 +4,11 @@ import com.mcdonalds.food.*;
 import com.mcdonalds.store.Store;
 import com.mcdonalds.user.User;
 import com.mcdonalds.order.Order;
+import com.mcdonalds.food.EntreeType;
+import com.mcdonalds.food.Size;
+import com.mcdonalds.food.DrinkType;
+import com.mcdonalds.food.DessertType;
+import com.mcdonalds.food.SideType;
 
 
 import javax.swing.JFrame;
@@ -333,28 +338,23 @@ public class OrderForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (burgerSelBox.getSelectedIndex() != 0 && burgerSizeBox.getSelectedIndex() != 0) {
-                    updateAllPrices(1.00);
-
-
-
+                    // get the integer values of selected values
                     int selectedEntreeIndex = burgerSelBox.getSelectedIndex();
                     int selectedSizeIndex = burgerSizeBox.getSelectedIndex();
+                    // convert to Enum values
+                    EntreeType selectedEntree = EntreeType.fromString(burgerOptions[selectedEntreeIndex]);
+                    Size selectedSize = Size.fromString(sizesArray[selectedSizeIndex]);
+                    // create a new Entree
+                    Entree newEntree = new Entree(selectedEntree, selectedSize);
+                    // add Entree to order
+                    order.addFoodItem(newEntree);
+                    // update prices
+                    updateAllPrices(newEntree.getPrice());
 
-                    System.out.println(String.valueOf(selectedEntreeIndex));
-                    System.out.printf(String.valueOf(selectedSizeIndex));
-                    System.out.println(newLine);
-
-                    System.out.println(EntreeType.fromString(burgerOptions[selectedEntreeIndex]));
-                    //EntreeType selectedEntree = EntreeType.valueOf(burgerOptions[selectedEntreeIndex]);
-                    //Size selectedSize = Size.valueOf(sizesArray[selectedSizeIndex]);
-                    //order.addFoodItem(selectedEntree);
-                    //System.out.println(selectedEntree);
-                    //System.out.println(selectedSize);
-                    //Entree newEntree = new Entree(burgerSelBox)
-
-
+                    // update and UI
                     feedbackLabel1.setText("Order Placed!");
                     feedbackLabel1.setVisible(true);
+                    // reset the Size Boxes to Zero
                     burgerSizeBox.setSelectedIndex(0);
                     burgerSelBox.setSelectedIndex(0);
                 }
@@ -366,11 +366,26 @@ public class OrderForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (sideSelBox.getSelectedIndex() != 0 && sideSizeBox.getSelectedIndex() != 0) {
-                    updateAllPrices(1.50);
-                    sideSizeBox.setSelectedIndex(0);
-                    sideSelBox.setSelectedIndex(0);
+                    // get the integer values of selected values
+                    int selectedSideIndex = sideSelBox.getSelectedIndex();
+                    int selectedSizeIndex = sideSizeBox.getSelectedIndex();
+                    // convert to Enum values
+                    SideType selectedSide = SideType.fromString(sideOptions[selectedSideIndex]);
+                    Size selectedSize = Size.fromString(sizesArray[selectedSizeIndex]);
+                    // create a new Entree
+                    Side newSide = new Side(selectedSide, selectedSize);
+                    // add Entree to order
+                    order.addFoodItem(newSide);
+                    // update prices
+                    updateAllPrices(newSide.getPrice());
+
+                    //update UI
                     feedbackLabel2.setText("Order Placed!");
                     feedbackLabel2.setVisible(true);
+
+                    // reset the Side box values to Zero
+                    sideSizeBox.setSelectedIndex(0);
+                    sideSelBox.setSelectedIndex(0);
                 }
             }
         });
@@ -380,11 +395,26 @@ public class OrderForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (dessertSelBox.getSelectedIndex() != 0 && dessertSizeBox.getSelectedIndex() != 0) {
-                    updateAllPrices(0.75);
-                    dessertSizeBox.setSelectedIndex(0);
-                    dessertSelBox.setSelectedIndex(0);
+                    // get the integer values of selected values
+                    int selectedDessertIndex = dessertSelBox.getSelectedIndex();
+                    int selectedSizeIndex = sideSizeBox.getSelectedIndex();
+                    // convert to Enum values
+                    DessertType selectedDessert = DessertType.fromString(dessertOptions[selectedDessertIndex]);
+                    Size selectedSize = Size.fromString(sizesArray[selectedSizeIndex]);
+                    // create a new Entree
+                    Dessert newDessert = new Dessert(selectedDessert, selectedSize);
+                    // add Entree to order
+                    order.addFoodItem(newDessert);
+                    // update prices
+                    updateAllPrices(newDessert.getPrice());
+
+                    // update UI
                     feedbackLabel3.setText("Order Placed!");
                     feedbackLabel3.setVisible(true);
+                    // reset Size Box values to Zero
+                    dessertSizeBox.setSelectedIndex(0);
+                    dessertSelBox.setSelectedIndex(0);
+
                 }
             }
         });
@@ -394,11 +424,25 @@ public class OrderForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (drinkSelBox.getSelectedIndex() != 0 && drinkSizeBox.getSelectedIndex() != 0) {
-                    updateAllPrices(1.15);
-                    drinkSizeBox.setSelectedIndex(0);
-                    drinkSelBox.setSelectedIndex(0);
+                    // get the integer values of selected values
+                    int selectedDrinkIndex = drinkSelBox.getSelectedIndex();
+                    int selectedSizeIndex = sideSizeBox.getSelectedIndex();
+                    // convert to Enum values
+                    DrinkType selectedDrink = DrinkType.fromString(drinkOptions[selectedDrinkIndex]);
+                    Size selectedSize = Size.fromString(sizesArray[selectedSizeIndex]);
+                    // create a new Entree
+                    Drink newDrink = new Drink(selectedDrink, selectedSize);
+                    // add Entree to order
+                    order.addFoodItem(newDrink);
+                    // update prices
+                    updateAllPrices(newDrink.getPrice());
+
+                    // update UI
                     feedbackLabel4.setText("Order Placed!");
                     feedbackLabel4.setVisible(true);
+                    // reset Side Box values to Zero
+                    drinkSizeBox.setSelectedIndex(0);
+                    drinkSelBox.setSelectedIndex(0);
                 }
             }
         });
