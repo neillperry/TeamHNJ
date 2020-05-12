@@ -187,6 +187,7 @@ public class OrderForm extends JFrame {
         createSideBox();
         createDessertBox();
         createDrinkBox();
+        createFinalPanel();
     }
 
 
@@ -293,6 +294,10 @@ public class OrderForm extends JFrame {
         drinkSizeBox.setEditable(false);
     }
 
+    private void createFinalPanel() {
+        feedbackLabel5.setVisible(false);
+        reviewOrderLabel.setVisible(false);
+    }
 
     // Hide Feeedback Label when Size Box is set to != first element
     private void addSizeBoxListeners() {
@@ -519,7 +524,9 @@ public class OrderForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 count--;
                 if (count > 1) {
-                    orderLabel.setText(Integer.toString(count));
+                    int minutes = count / 60;
+                    int seconds = count % 60;
+                    orderLabel.setText(String.format("%d:%02d", minutes, seconds));
                 } else {
                     ((Timer) (e.getSource())).stop();
                 }
