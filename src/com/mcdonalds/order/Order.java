@@ -46,6 +46,10 @@ public class Order {
         this.orderNumber = orderNumber;
     }
 
+    public int getOrderNumber() {
+        return orderNumber;
+    }
+
     public void calculateTotalPrice() {
         for (FoodItem food : foodItems) {
             totalPrice += food.getPrice();

@@ -28,8 +28,9 @@ public class OrderForm extends JFrame {
     private static String newLine = "\n";
     private static String space = " ";
     private static String selectOption = "(select item)";
+    private static String itemAdded = "Item Added!";
     private static String[] sizesArray = new String[] {
-            "Select a Size",
+            "(select size)",
             Size.SMALL.type(),
             Size.REGULAR.type(),
             Size.LARGE.type()
@@ -134,6 +135,7 @@ public class OrderForm extends JFrame {
     private JLabel reviewOrderLabel;
     private JLabel feedbackLabel5;
     private JLabel orderLabel;
+    private JLabel readyLabel;
     private int count = 120;
     private Timer timer;
 
@@ -296,7 +298,8 @@ public class OrderForm extends JFrame {
 
     private void createFinalPanel() {
         feedbackLabel5.setVisible(false);
-        reviewOrderLabel.setVisible(false);
+        orderLabel.setVisible(false);
+        readyLabel.setVisible(false);
     }
 
     // Hide Feeedback Label when Size Box is set to != first element
@@ -375,7 +378,7 @@ public class OrderForm extends JFrame {
                     burgerSizeBox.setSelectedIndex(0);
                     burgerSelBox.setSelectedIndex(0);
                     // update and UI
-                    feedbackLabel1.setText("Order Placed!");
+                    feedbackLabel1.setText(itemAdded);
                     feedbackLabel1.setVisible(true);
                 }
             }
@@ -411,7 +414,7 @@ public class OrderForm extends JFrame {
                     sideSizeBox.setSelectedIndex(0);
                     sideSelBox.setSelectedIndex(0);
                     //update UI
-                    feedbackLabel2.setText("Order Placed!");
+                    feedbackLabel2.setText(itemAdded);
                     feedbackLabel2.setVisible(true);
                 }
             }
@@ -447,7 +450,7 @@ public class OrderForm extends JFrame {
                     dessertSizeBox.setSelectedIndex(0);
                     dessertSelBox.setSelectedIndex(0);
                     // update UI
-                    feedbackLabel3.setText("Order Placed!");
+                    feedbackLabel3.setText(itemAdded);
                     feedbackLabel3.setVisible(true);
 
                 }
@@ -483,17 +486,23 @@ public class OrderForm extends JFrame {
                     drinkSizeBox.setSelectedIndex(0);
                     drinkSelBox.setSelectedIndex(0);
                     // update UI
-                    feedbackLabel4.setText("Order Placed!");
+                    feedbackLabel4.setText(itemAdded);
                     feedbackLabel4.setVisible(true);
                 }
             }
         });
 
-        // DRINKS
+        // FINAL ORDER
         orderButton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                newStore.processOrder(order);
                 feedbackLabel5.setText("ORDER PLACED!!!");
+                feedbackLabel5.setVisible(true);
+                readyLabel.setText("Your Order Will Be Ready Soon!");
+                readyLabel.setVisible(true);
+                orderLabel.setVisible(true);
+                orderReviewTextArea.append("Order Number: " + String.valueOf(order.getOrderNumber()));
                 timer.setInitialDelay(0);
                 timer.start();
 
