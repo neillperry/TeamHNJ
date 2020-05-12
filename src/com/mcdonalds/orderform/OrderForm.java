@@ -29,6 +29,7 @@ public class OrderForm extends JFrame {
     private static String selectOption = "(select item)";
     private static String itemAdded = "Item Added!";
     private static String decimalFormat = "%.2f";
+    private static String dollarSign = "$";
     private static String welcomeMessage = "Welcome to McDonalds!";
     private static String[] sizesArray;
     private double totalPrice = 0.00;
@@ -95,7 +96,7 @@ public class OrderForm extends JFrame {
     private JTextArea orderReviewTextArea;
     private JLabel reviewOrderLabel;
     private JLabel feedbackLabel5;
-    private JLabel orderLabel;
+    private JLabel timerLabel;
     private JLabel readyLabel;
     private int count = 120;
     private Timer timer;
@@ -255,7 +256,7 @@ public class OrderForm extends JFrame {
 
     private void createFinalPanel() {
         feedbackLabel5.setVisible(false);
-        orderLabel.setVisible(false);
+        timerLabel.setVisible(false);
         readyLabel.setVisible(false);
     }
 
@@ -458,20 +459,23 @@ public class OrderForm extends JFrame {
                 feedbackLabel5.setVisible(true);
                 readyLabel.setText("Your Order Will Be Ready Soon!");
                 readyLabel.setVisible(true);
-                orderLabel.setVisible(true);
+                timerLabel.setVisible(true);
                 orderReviewTextArea.append(
                         newLine +
                         "TOTAL PRICE: " +
+                                dollarSign +
                                 space +
                                 String.format(decimalFormat, totalPrice) +
                                 newLine +
                         "Order Number: " +
+                                "#" +
+                                space +
                                 String.valueOf(order.getOrderNumber()) +
                                 newLine
                 );
                 timer.setInitialDelay(0);
                 timer.start();
-
+                createNewOrder();
             }
         });
 
@@ -480,11 +484,11 @@ public class OrderForm extends JFrame {
 
     private void updateAllPrices(double newPrice) {
         totalPrice += newPrice;
-        priceLabel1.setText(String.format(decimalFormat, totalPrice));
-        priceLabel2.setText(String.format(decimalFormat, totalPrice));
-        priceLabel3.setText(String.format(decimalFormat, totalPrice));
-        priceLabel4.setText(String.format(decimalFormat, totalPrice));
-        priceLabel5.setText(String.format(decimalFormat, totalPrice));
+        priceLabel1.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
+        priceLabel2.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
+        priceLabel3.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
+        priceLabel4.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
+        priceLabel5.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
     }
 
     private void createBusinessVariables() {
@@ -508,7 +512,7 @@ public class OrderForm extends JFrame {
                 if (count > 1) {
                     int minutes = count / 60;
                     int seconds = count % 60;
-                    orderLabel.setText(String.format("%d:%02d", minutes, seconds));
+                    timerLabel.setText(String.format("%d:%02d", minutes, seconds));
                 } else {
                     ((Timer) (e.getSource())).stop();
                 }
