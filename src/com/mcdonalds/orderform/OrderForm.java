@@ -29,6 +29,7 @@ public class OrderForm extends JFrame {
     private static String selectOption = "(select item)";
     private static String itemAdded = "Item Added!";
     private static String decimalFormat = "%.2f";
+    private static String welcomeMessage = "Welcome to McDonalds!";
     private static String[] sizesArray;
     private double totalPrice = 0.00;
 
@@ -102,7 +103,7 @@ public class OrderForm extends JFrame {
 
     public static void main(String[] args) {
         // Creates the GUI interface
-        OrderForm form = new OrderForm("Welcome to McDonald's!");
+        OrderForm form = new OrderForm(welcomeMessage);
         form.setVisible(true);
     }
 
@@ -458,7 +459,16 @@ public class OrderForm extends JFrame {
                 readyLabel.setText("Your Order Will Be Ready Soon!");
                 readyLabel.setVisible(true);
                 orderLabel.setVisible(true);
-                orderReviewTextArea.append("Order Number: " + String.valueOf(order.getOrderNumber()));
+                orderReviewTextArea.append(
+                        newLine +
+                        "TOTAL PRICE: " +
+                                space +
+                                String.format(decimalFormat, totalPrice) +
+                                newLine +
+                        "Order Number: " +
+                                String.valueOf(order.getOrderNumber()) +
+                                newLine
+                );
                 timer.setInitialDelay(0);
                 timer.start();
 
@@ -482,6 +492,12 @@ public class OrderForm extends JFrame {
         user = new User("Bob", 22);
         order = new Order(newStore, user);
         createArrays();
+    }
+
+    private void createNewOrder() {
+        totalPrice = 0.0;
+        updateAllPrices(totalPrice);
+        order = new Order(newStore, user);
     }
 
     private void createTimer() {
@@ -544,6 +560,5 @@ public class OrderForm extends JFrame {
                 DrinkType.ADULT_BEVERAGE.type()
         };
     }
-
 }
 
