@@ -42,6 +42,9 @@ public class Store {
 
     // BUSINESS METHODS
     public void processOrder(Order order) {
+        // FOOD ITEMS OF EACH ORDER
+        //order.getFoodItems();
+
         order.setOrderNumber(createOrderNumber());
         collectedSalesTaxes += order.getTotalPrice() * TAXRATE;
         storeRevenue += order.getTotalPrice();

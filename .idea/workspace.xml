@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/orderform/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/orderform/OrderForm.java" afterDir="false" />
-    </list>
+    <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +15,7 @@
         <option value="Class" />
         <option value="Enum" />
         <option value="JUnit3 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -37,8 +36,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -48,14 +48,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.mcdonalds.inventory" />
       <recent name="com.mcdonalds.store" />
       <recent name="com.mcdonalds.order" />
       <recent name="com.mcdonalds.user" />
       <recent name="com.mcdonalds.food" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
       <recent name="" />
+      <recent name="junit.framework.TestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/mcdonalds/inventory" />
@@ -241,29 +242,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="645" y="267" key="ConfigureClientPropertiesDialog/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973367894" />
-    <state width="1473" height="124" key="GridCell.Tab.0.bottom" timestamp="1589309699585">
+    <state width="1473" height="124" key="GridCell.Tab.0.bottom" timestamp="1589311481231">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.bottom/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846799" />
-    <state width="1473" height="124" key="GridCell.Tab.0.bottom/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589309699585" />
+    <state width="1473" height="124" key="GridCell.Tab.0.bottom/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589311481231" />
     <state width="1473" height="268" key="GridCell.Tab.0.bottom/0.23.1680.943@0.23.1680.943" timestamp="1589291217624" />
-    <state width="1473" height="124" key="GridCell.Tab.0.center" timestamp="1589309699583">
+    <state width="1473" height="124" key="GridCell.Tab.0.center" timestamp="1589311481230">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.center/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846797" />
-    <state width="1473" height="124" key="GridCell.Tab.0.center/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589309699583" />
+    <state width="1473" height="124" key="GridCell.Tab.0.center/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589311481230" />
     <state width="1473" height="268" key="GridCell.Tab.0.center/0.23.1680.943@0.23.1680.943" timestamp="1589291217624" />
-    <state width="1473" height="124" key="GridCell.Tab.0.left" timestamp="1589309699583">
+    <state width="1473" height="124" key="GridCell.Tab.0.left" timestamp="1589311481229">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.left/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846796" />
-    <state width="1473" height="124" key="GridCell.Tab.0.left/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589309699583" />
+    <state width="1473" height="124" key="GridCell.Tab.0.left/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589311481229" />
     <state width="1473" height="268" key="GridCell.Tab.0.left/0.23.1680.943@0.23.1680.943" timestamp="1589291217623" />
-    <state width="1473" height="124" key="GridCell.Tab.0.right" timestamp="1589309699584">
+    <state width="1473" height="124" key="GridCell.Tab.0.right" timestamp="1589311481231">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.right/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846798" />
-    <state width="1473" height="124" key="GridCell.Tab.0.right/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589309699584" />
+    <state width="1473" height="124" key="GridCell.Tab.0.right/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589311481231" />
     <state width="1473" height="268" key="GridCell.Tab.0.right/0.23.1680.943@0.23.1680.943" timestamp="1589291217624" />
     <state x="161" y="129" key="SettingsEditor" timestamp="1589213494250">
       <screen x="0" y="23" width="1680" height="943" />
@@ -273,10 +274,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="707" y="326" key="UIDesigner.ListEditorDialog/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588972655086" />
-    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589294112307">
+    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589311513658">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
-    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589294112307" />
+    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589311513658" />
     <state x="59" y="176" key="new project wizard" timestamp="1589210952778">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
