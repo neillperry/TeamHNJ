@@ -28,20 +28,14 @@ public class OrderForm extends JFrame {
     private static String space = " ";
     private static String selectOption = "(select item)";
     private static String itemAdded = "Item Added!";
-    private static String[] sizesArray = new String[] {
-            "(select size)",
-            Size.SMALL.type(),
-            Size.REGULAR.type(),
-            Size.LARGE.type()
-    };
-
+    private static String decimalFormat = "%.2f";
+    private static String[] sizesArray;
     private double totalPrice = 0.00;
 
     // Business Variables
     private Store newStore;
     private User user;
     private Order order;
-
 
     // Main Tabbed Panel
     private JTabbedPane tabbedPane;
@@ -56,15 +50,7 @@ public class OrderForm extends JFrame {
     private JComboBox burgerSelBox;
     private JComboBox burgerSizeBox;
     private JLabel feedbackLabel1;
-    private static String[] burgerOptions = new String[] {
-            selectOption,
-            EntreeType.HAMBURGER.type(),
-            EntreeType.CHEESEBURGER.type(),
-            EntreeType.CHICKEN_SANDWICH.type(),
-            EntreeType.CHICKEN_NUGGETS.type(),
-            EntreeType.MYSTERY.type()
-    };
-
+    private static String[] burgerOptions;
 
     // Sides Panel
     private JPanel sides;
@@ -75,16 +61,7 @@ public class OrderForm extends JFrame {
     private JComboBox sideSelBox;
     private JComboBox sideSizeBox;
     private JLabel feedbackLabel2;
-    private static String[] sideOptions = new String[] {
-            selectOption,
-            SideType.FRIES.type(),
-            SideType.APPLE.type(),
-            SideType.SALAD.type(),
-            SideType.ONION_RINGS.type(),
-            SideType.MOZZARELLA_STICKS.type(),
-            SideType.MYSTERY.type()
-    };
-
+    private static String[] sideOptions;
 
     // Dessert Panel
     private JPanel desserts;
@@ -95,15 +72,7 @@ public class OrderForm extends JFrame {
     private JComboBox dessertSelBox;
     private JComboBox dessertSizeBox;
     private JLabel feedbackLabel3;
-    private static String[] dessertOptions = new String[] {
-            selectOption,
-            DessertType.APPLE_PIE.type(),
-            DessertType.ICE_CREAM.type(),
-            DessertType.COOKIE.type(),
-            DessertType.BIRTHDAY_CAKE.type(),
-            DessertType.FROSTED_TATER_TOTS.type()
-    };
-
+    private static String[] dessertOptions;
 
     // Drink Panel
     private JPanel drinks;
@@ -114,15 +83,7 @@ public class OrderForm extends JFrame {
     private JComboBox drinkSelBox;
     private JComboBox drinkSizeBox;
     private JLabel feedbackLabel4;
-    private static String[] drinkOptions = new String[] {
-            selectOption,
-            DrinkType.COKE.type(),
-            DrinkType.DIET_COKE.type(),
-            DrinkType.SPRITE.type(),
-            DrinkType.WATER.type(),
-            DrinkType.ADULT_BEVERAGE.type()
-    };
-
+    private static String[] drinkOptions;
 
     // Final Order Panel
     private JPanel finalOrder;
@@ -366,7 +327,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newEntree.getType().type() +
                                     space +
-                                    String.format("%.2f", newEntree.getPrice()) +
+                                    String.format(decimalFormat, newEntree.getPrice()) +
                                     newLine);
 
                     // reset the Size Boxes to Zero
@@ -402,7 +363,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newSide.getType().type() +
                                     space +
-                                    String.format("%.2f", newSide.getPrice()) +
+                                    String.format(decimalFormat, newSide.getPrice()) +
                             newLine);
 
                     // reset the Side box values to Zero
@@ -438,7 +399,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newDessert.getType().type() +
                                     space +
-                                    String.format("%.2f", newDessert.getPrice()) +
+                                    String.format(decimalFormat, newDessert.getPrice()) +
                                     newLine);
 
                     // reset Size Box values to Zero
@@ -474,7 +435,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newDrink.getType().type() +
                                     space +
-                                    String.format("%.2f", newDrink.getPrice()) +
+                                    String.format(decimalFormat, newDrink.getPrice()) +
                                     newLine);
 
                     // reset Side Box values to Zero
@@ -509,17 +470,18 @@ public class OrderForm extends JFrame {
 
     private void updateAllPrices(double newPrice) {
         totalPrice += newPrice;
-        priceLabel1.setText(String.format("%.2f", totalPrice));
-        priceLabel2.setText(String.format("%.2f", totalPrice));
-        priceLabel3.setText(String.format("%.2f", totalPrice));
-        priceLabel4.setText(String.format("%.2f", totalPrice));
-        priceLabel5.setText(String.format("%.2f", totalPrice));
+        priceLabel1.setText(String.format(decimalFormat, totalPrice));
+        priceLabel2.setText(String.format(decimalFormat, totalPrice));
+        priceLabel3.setText(String.format(decimalFormat, totalPrice));
+        priceLabel4.setText(String.format(decimalFormat, totalPrice));
+        priceLabel5.setText(String.format(decimalFormat, totalPrice));
     }
 
     private void createBusinessVariables() {
         newStore = new Store();
         user = new User("Bob", 22);
         order = new Order(newStore, user);
+        createArrays();
     }
 
     private void createTimer() {
@@ -538,6 +500,50 @@ public class OrderForm extends JFrame {
         });
     }
 
+    private void createArrays() {
+        sizesArray = new String[] {
+                "(select size)",
+                Size.SMALL.type(),
+                Size.REGULAR.type(),
+                Size.LARGE.type()
+        };
+        burgerOptions = new String[] {
+                selectOption,
+                EntreeType.HAMBURGER.type(),
+                EntreeType.CHEESEBURGER.type(),
+                EntreeType.CHICKEN_SANDWICH.type(),
+                EntreeType.CHICKEN_NUGGETS.type(),
+                EntreeType.MYSTERY.type()
+        };
+
+        sideOptions = new String[] {
+                selectOption,
+                SideType.FRIES.type(),
+                SideType.APPLE.type(),
+                SideType.SALAD.type(),
+                SideType.ONION_RINGS.type(),
+                SideType.MOZZARELLA_STICKS.type(),
+                SideType.MYSTERY.type()
+        };
+
+        dessertOptions = new String[] {
+                selectOption,
+                DessertType.APPLE_PIE.type(),
+                DessertType.ICE_CREAM.type(),
+                DessertType.COOKIE.type(),
+                DessertType.BIRTHDAY_CAKE.type(),
+                DessertType.FROSTED_TATER_TOTS.type()
+        };
+
+        drinkOptions = new String[] {
+                selectOption,
+                DrinkType.COKE.type(),
+                DrinkType.DIET_COKE.type(),
+                DrinkType.SPRITE.type(),
+                DrinkType.WATER.type(),
+                DrinkType.ADULT_BEVERAGE.type()
+        };
+    }
 
 }
 
