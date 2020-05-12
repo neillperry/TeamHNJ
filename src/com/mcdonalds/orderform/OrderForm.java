@@ -124,6 +124,7 @@ public class OrderForm extends JFrame {
         createImageIcons();
         addOrderButtonListeners();
         addSizeBoxListeners();
+        addSelBoxListeners();
         createTimer();
         createFeedbackLabels();
     }
@@ -271,7 +272,7 @@ public class OrderForm extends JFrame {
         burgerSizeBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (burgerSelBox.getSelectedIndex() != 0 || burgerSizeBox.getSelectedIndex() != 0) {
+                if (burgerSizeBox.getSelectedIndex() != 0) {
                     feedbackLabel1.setVisible(false);
                 }
             }
@@ -281,7 +282,7 @@ public class OrderForm extends JFrame {
         sideSizeBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (sideSelBox.getSelectedIndex() != 0 || sideSizeBox.getSelectedIndex() != 0) {
+                if (sideSizeBox.getSelectedIndex() != 0) {
                     feedbackLabel2.setVisible(false);
                 }
             }
@@ -291,7 +292,7 @@ public class OrderForm extends JFrame {
         dessertSizeBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (dessertSelBox.getSelectedIndex() != 0 || dessertSizeBox.getSelectedIndex() != 0) {
+                if (dessertSizeBox.getSelectedIndex() != 0) {
                     feedbackLabel3.setVisible(false);
                 }
             }
@@ -301,13 +302,55 @@ public class OrderForm extends JFrame {
         drinkSizeBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (drinkSelBox.getSelectedIndex() != 0 || drinkSizeBox.getSelectedIndex() != 0) {
+                if (drinkSizeBox.getSelectedIndex() != 0) {
                     feedbackLabel4.setVisible(false);
                 }
             }
         });
     }
 
+    // Hide Feeedback Label when Size Box is set to != first element
+    private void addSelBoxListeners() {
+        // ENTREES
+        burgerSelBox.addActionListener(new ActionListener () {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (burgerSelBox.getSelectedIndex() != 0) {
+                    feedbackLabel1.setVisible(false);
+                }
+            }
+        });
+
+        // SIDES
+        sideSelBox.addActionListener(new ActionListener () {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (sideSelBox.getSelectedIndex() != 0) {
+                    feedbackLabel2.setVisible(false);
+                }
+            }
+        });
+
+        // DESSERTS
+        dessertSelBox.addActionListener(new ActionListener () {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (dessertSelBox.getSelectedIndex() != 0) {
+                    feedbackLabel3.setVisible(false);
+                }
+            }
+        });
+
+        // DRINKS
+        drinkSelBox.addActionListener(new ActionListener () {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (drinkSelBox.getSelectedIndex() != 0) {
+                    feedbackLabel4.setVisible(false);
+                }
+            }
+        });
+    }
 
     // Place Order Action Listeners
     private void addOrderButtonListeners() {
