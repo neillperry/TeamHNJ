@@ -363,7 +363,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newEntree.getType().type() +
                                     space +
-                                    String.valueOf(newEntree.getPrice()) +
+                                    String.format("%.2f", newEntree.getPrice()) +
                                     newLine);
 
                     // reset the Size Boxes to Zero
@@ -399,7 +399,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newSide.getType().type() +
                                     space +
-                                    String.valueOf(newSide.getPrice()) +
+                                    String.format("%.2f", newSide.getPrice()) +
                             newLine);
 
                     // reset the Side box values to Zero
@@ -435,7 +435,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newDessert.getType().type() +
                                     space +
-                                    String.valueOf(newDessert.getPrice()) +
+                                    String.format("%.2f", newDessert.getPrice()) +
                                     newLine);
 
                     // reset Size Box values to Zero
@@ -471,7 +471,7 @@ public class OrderForm extends JFrame {
                                     space +
                                     newDrink.getType().type() +
                                     space +
-                                    String.valueOf(newDrink.getPrice()) +
+                                    String.format("%.2f", newDrink.getPrice()) +
                                     newLine);
 
                     // reset Side Box values to Zero
@@ -483,16 +483,28 @@ public class OrderForm extends JFrame {
                 }
             }
         });
+
+        // DRINKS
+        orderButton5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                feedbackLabel5.setText("ORDER PLACED!!!");
+                timer.setInitialDelay(0);
+                timer.start();
+
+            }
+        });
+
     }
 
 
     private void updateAllPrices(double newPrice) {
         totalPrice += newPrice;
-        priceLabel1.setText(String.valueOf(totalPrice));
-        priceLabel2.setText(String.valueOf(totalPrice));
-        priceLabel3.setText(String.valueOf(totalPrice));
-        priceLabel4.setText(String.valueOf(totalPrice));
-        priceLabel5.setText(String.valueOf(totalPrice));
+        priceLabel1.setText(String.format("%.2f", totalPrice));
+        priceLabel2.setText(String.format("%.2f", totalPrice));
+        priceLabel3.setText(String.format("%.2f", totalPrice));
+        priceLabel4.setText(String.format("%.2f", totalPrice));
+        priceLabel5.setText(String.format("%.2f", totalPrice));
     }
 
     private void createBusinessVariables() {
