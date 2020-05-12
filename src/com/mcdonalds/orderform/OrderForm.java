@@ -150,6 +150,8 @@ public class OrderForm extends JFrame {
         createFinalPanel();
     }
 
+
+
     private void createFeedbackLabels() {
         feedbackLabel1.setVisible(false);
         feedbackLabel1.setForeground(Color.GREEN);
@@ -546,6 +548,14 @@ public class OrderForm extends JFrame {
         updateAllPrices(totalPrice);
         order = new Order(newStore, user);
         orderReviewTextArea.append(newLine);
+        hideFeedbackLabesl();
+    }
+
+    private void hideFeedbackLabesl() {
+        feedbackLabel1.setVisible(false);
+        feedbackLabel2.setVisible(false);
+        feedbackLabel3.setVisible(false);
+        feedbackLabel4.setVisible(false);
     }
 
     private void createTimer() {
