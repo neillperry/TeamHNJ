@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TeamHNJ/com/mcdonalds/store/StoreTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/test/TeamHNJ/com/mcdonalds/store/StoreTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/order/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/mcdonalds/order/OrderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/store/StoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/mcdonalds/store/StoreTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +17,9 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="JUnit3 Test Class" />
         <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -49,6 +51,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.mcdonalds.store" />
+      <recent name="com.mcdonalds.order" />
       <recent name="com.mcdonalds.user" />
       <recent name="com.mcdonalds.food" />
     </key>
@@ -60,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/com/mcdonalds/images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest">
+  <component name="RunManager" selected="JUnit.StoreTest.testProcessOrders">
     <configuration name="OrderForm (1)" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mcdonalds.orderform.OrderForm" />
       <module name="TeamHNJ" />
@@ -70,21 +74,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DessertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TeamHNJ" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mcdonalds.food.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mcdonalds.food" />
-      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.food.DessertTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,31 +89,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EntreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TeamHNJ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mcdonalds.food.*" />
+          <option name="PATTERN" value="com.mcdonalds.order.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mcdonalds.food" />
-      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.food.EntreeTest" />
+      <option name="PACKAGE_NAME" value="com.mcdonalds.order" />
+      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.order.OrderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SideTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderTest.testThing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TeamHNJ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mcdonalds.food.*" />
+          <option name="PATTERN" value="com.mcdonalds.order.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mcdonalds.food" />
-      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.food.SideTest" />
+      <option name="PACKAGE_NAME" value="com.mcdonalds.order" />
+      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.order.OrderTest" />
+      <option name="METHOD_NAME" value="testThing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TeamHNJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcdonalds.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mcdonalds.store" />
+      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.store.StoreTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,17 +151,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StoreTest.testProcessOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TeamHNJ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mcdonalds.user.*" />
+          <option name="PATTERN" value="com.mcdonalds.store.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mcdonalds.user" />
-      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.user.UserTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.mcdonalds.store" />
+      <option name="MAIN_CLASS_NAME" value="com.mcdonalds.store.StoreTest" />
+      <option name="METHOD_NAME" value="testProcessOrders" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,19 +170,19 @@
     <list>
       <item itemvalue="Application.OrderForm (1)" />
       <item itemvalue="JUnit.DrinkTest" />
-      <item itemvalue="JUnit.EntreeTest" />
-      <item itemvalue="JUnit.SideTest" />
       <item itemvalue="JUnit.StoreTest.testProcessOrder" />
-      <item itemvalue="JUnit.DessertTest" />
-      <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.OrderTest" />
+      <item itemvalue="JUnit.OrderTest.testThing" />
+      <item itemvalue="JUnit.StoreTest" />
+      <item itemvalue="JUnit.StoreTest.testProcessOrders" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserTest" />
-        <item itemvalue="JUnit.DessertTest" />
+        <item itemvalue="JUnit.StoreTest.testProcessOrders" />
+        <item itemvalue="JUnit.StoreTest" />
         <item itemvalue="JUnit.StoreTest.testProcessOrder" />
-        <item itemvalue="JUnit.SideTest" />
-        <item itemvalue="JUnit.EntreeTest" />
+        <item itemvalue="JUnit.OrderTest.testThing" />
+        <item itemvalue="JUnit.OrderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,29 +243,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="645" y="267" key="ConfigureClientPropertiesDialog/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973367894" />
-    <state width="1473" height="268" key="GridCell.Tab.0.bottom" timestamp="1589291217624">
+    <state width="1473" height="161" key="GridCell.Tab.0.bottom" timestamp="1589294412561">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.bottom/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846799" />
-    <state width="1473" height="149" key="GridCell.Tab.0.bottom/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589236755276" />
+    <state width="1473" height="161" key="GridCell.Tab.0.bottom/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589294412561" />
     <state width="1473" height="268" key="GridCell.Tab.0.bottom/0.23.1680.943@0.23.1680.943" timestamp="1589291217624" />
-    <state width="1473" height="268" key="GridCell.Tab.0.center" timestamp="1589291217624">
+    <state width="1473" height="161" key="GridCell.Tab.0.center" timestamp="1589294412561">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.center/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846797" />
-    <state width="1473" height="149" key="GridCell.Tab.0.center/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589236755275" />
+    <state width="1473" height="161" key="GridCell.Tab.0.center/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589294412561" />
     <state width="1473" height="268" key="GridCell.Tab.0.center/0.23.1680.943@0.23.1680.943" timestamp="1589291217624" />
-    <state width="1473" height="268" key="GridCell.Tab.0.left" timestamp="1589291217623">
+    <state width="1473" height="161" key="GridCell.Tab.0.left" timestamp="1589294412560">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.left/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846796" />
-    <state width="1473" height="149" key="GridCell.Tab.0.left/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589236755274" />
+    <state width="1473" height="161" key="GridCell.Tab.0.left/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589294412560" />
     <state width="1473" height="268" key="GridCell.Tab.0.left/0.23.1680.943@0.23.1680.943" timestamp="1589291217623" />
-    <state width="1473" height="268" key="GridCell.Tab.0.right" timestamp="1589291217624">
+    <state width="1473" height="161" key="GridCell.Tab.0.right" timestamp="1589294412561">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
     <state width="1638" height="17" key="GridCell.Tab.0.right/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588973846798" />
-    <state width="1473" height="149" key="GridCell.Tab.0.right/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589236755275" />
+    <state width="1473" height="161" key="GridCell.Tab.0.right/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589294412561" />
     <state width="1473" height="268" key="GridCell.Tab.0.right/0.23.1680.943@0.23.1680.943" timestamp="1589291217624" />
     <state x="161" y="129" key="SettingsEditor" timestamp="1589213494250">
       <screen x="0" y="23" width="1680" height="943" />
@@ -269,10 +275,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="707" y="326" key="UIDesigner.ListEditorDialog/0.0.1680.1050/-1280.0.1280.1024@0.0.1680.1050" timestamp="1588972655086" />
-    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589228195318">
+    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589294112307">
       <screen x="0" y="23" width="1680" height="943" />
     </state>
-    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589228195318" />
+    <state x="644" y="246" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1680.943/-1280.23.1280.1001@0.23.1680.943" timestamp="1589294112307" />
     <state x="59" y="176" key="new project wizard" timestamp="1589210952778">
       <screen x="0" y="23" width="1680" height="943" />
     </state>

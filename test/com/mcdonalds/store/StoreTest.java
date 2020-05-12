@@ -1,41 +1,28 @@
 package com.mcdonalds.store;
 
-import static com.mcdonalds.food.Size.SMALL;
-import static org.junit.Assert.*;
-import junit.framework.TestCase;
-import java.util.Collection;
-
-import com.mcdonalds.food.*;
 import com.mcdonalds.user.User;
 import com.mcdonalds.order.Order;
-import com.mcdonalds.store.Store;
+import junit.framework.TestCase;
+import com.mcdonalds.food.*;
+import java.util.Collection;
 
-import org.junit.Before;
-import org.junit.Test;
-
-public class StoreTest {
-    //private Store newStore;
-    private User newUser;
-    private User newUser2;
-    private User newUser3;
+public class StoreTest extends TestCase {
+    private Store newStore;
     private Order firstOrder;
     private Order secondOrder;
     private Order thirdOrder;
 
+    public void setUp() throws Exception {
+        super.setUp();
+        newStore = new Store();
 
-    @Before
-    public void before() {
-        //newStore = new Store();
+        User newUser = new User("Bob", 22);
+        User newUser2 = new User("Jane", 34);
+        User newUser3 = new User("Dog", 7);
 
-        newUser = new User("Bob", 22);
-        newUser2 = new User("Jane", 34);
-        newUser3 = new User("Dog", 7);
-
-        /*
         firstOrder = new Order(newStore, newUser);
         secondOrder = new Order(newStore, newUser2);
         thirdOrder = new Order(newStore, newUser3);
-*/
 
         // FOOD ITEMS
         Dessert cookie = new Dessert(DessertType.COOKIE, Size.LARGE);
@@ -52,9 +39,8 @@ public class StoreTest {
 
         Drink testCoke = new Drink(DrinkType.COKE, Size.LARGE);
         Drink testSprite = new Drink(DrinkType.SPRITE, Size.REGULAR);
-        Drink testAdult = new Drink(DrinkType.ADULT_BEVERAGE, SMALL);
+        Drink testAdult = new Drink(DrinkType.ADULT_BEVERAGE, Size.SMALL);
 
-        /*
         firstOrder.addFoodItem(burger);
         firstOrder.addFoodItem(cookie);
         firstOrder.addFoodItem(taterTots);
@@ -82,15 +68,24 @@ public class StoreTest {
         newStore.addNewOrder(firstOrder);
         newStore.addNewOrder(secondOrder);
         newStore.addNewOrder(thirdOrder);
-
-        */
     }
 
-    @Test
-    public void testProcessOrder() {
-        //Collection<Order> processedOrders = newStore.getCompletedOrders();
-        assertEquals(3, 3);
+    public void testProcessOrderZero() {
+        Collection<Order> completedOrders = newStore.getCompletedOrders();
+        assertEquals(0, completedOrders.size());
     }
 
+    public void testProcessOrders() {
+        newStore.processOrder(firstOrder);
+        newStore.processOrder(secondOrder);
+        newStore.processOrder(thirdOrder);
+        Collection<Order> completedOrders = newStore.getCompletedOrders();
+        assertEquals(3, completedOrders.size());
+    }
 
+    public void testAddNewOrder() {
+    }
+
+    public void testCreateOrderNumber() {
+    }
 }
