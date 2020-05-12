@@ -96,6 +96,7 @@
                   <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font size="14" style="1"/>
                   <text value="Label"/>
                 </properties>
               </component>
@@ -416,6 +417,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font name="Avenir Next" size="20"/>
                   <text value="Reveiw Your Order:"/>
                 </properties>
               </component>
@@ -424,6 +426,7 @@
                   <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font size="22"/>
                   <text value="Label"/>
                 </properties>
               </component>
@@ -432,6 +435,7 @@
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font size="16" style="1"/>
                   <text value="text"/>
                 </properties>
               </component>

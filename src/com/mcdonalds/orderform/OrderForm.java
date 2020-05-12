@@ -125,6 +125,7 @@ public class OrderForm extends JFrame {
         addOrderButtonListeners();
         addSizeBoxListeners();
         createTimer();
+        createFeedbackLabels();
     }
 
     private void createImageIcons() {
@@ -152,11 +153,25 @@ public class OrderForm extends JFrame {
         createFinalPanel();
     }
 
-    private void createBurgerBox() {
+    private void createFeedbackLabels() {
         feedbackLabel1.setVisible(false);
         feedbackLabel1.setForeground(Color.GREEN);
         feedbackLabel1.setBackground(Color.GREEN);
 
+        feedbackLabel2.setVisible(false);
+        feedbackLabel2.setForeground(Color.GREEN);
+
+        feedbackLabel3.setVisible(false);
+        feedbackLabel3.setForeground(Color.GREEN);
+
+        feedbackLabel4.setVisible(false);
+        feedbackLabel4.setForeground(Color.GREEN);
+
+        feedbackLabel5.setVisible(false);
+        reviewOrderLabel.setForeground(Color.BLUE);
+    }
+
+    private void createBurgerBox() {
         burgerSelBox.addItem(burgerOptions[0]);
         burgerSelBox.addItem(burgerOptions[1]);
         burgerSelBox.addItem(burgerOptions[2]);
@@ -179,9 +194,6 @@ public class OrderForm extends JFrame {
     }
 
     private void createSideBox() {
-        feedbackLabel2.setVisible(false);
-        feedbackLabel2.setForeground(Color.GREEN);
-
         sideSelBox.addItem(sideOptions[0]);
         sideSelBox.addItem(sideOptions[1]);
         sideSelBox.addItem(sideOptions[2]);
@@ -205,9 +217,6 @@ public class OrderForm extends JFrame {
     }
 
     private void createDessertBox() {
-        feedbackLabel3.setVisible(false);
-        feedbackLabel3.setForeground(Color.GREEN);
-
         dessertSelBox.addItem(dessertOptions[0]);
         dessertSelBox.addItem(dessertOptions[1]);
         dessertSelBox.addItem(dessertOptions[2]);
@@ -230,9 +239,6 @@ public class OrderForm extends JFrame {
     }
 
     private void createDrinkBox() {
-        feedbackLabel4.setVisible(false);
-        feedbackLabel4.setForeground(Color.GREEN);
-
         drinkSelBox.addItem(drinkOptions[0]);
         drinkSelBox.addItem(drinkOptions[1]);
         drinkSelBox.addItem(drinkOptions[2]);
@@ -255,7 +261,6 @@ public class OrderForm extends JFrame {
     }
 
     private void createFinalPanel() {
-        feedbackLabel5.setVisible(false);
         timerLabel.setVisible(false);
         readyLabel.setVisible(false);
     }
@@ -481,7 +486,6 @@ public class OrderForm extends JFrame {
 
     }
 
-
     private void updateAllPrices(double newPrice) {
         totalPrice += newPrice;
         priceLabel1.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
@@ -502,6 +506,7 @@ public class OrderForm extends JFrame {
         totalPrice = 0.0;
         updateAllPrices(totalPrice);
         order = new Order(newStore, user);
+        orderReviewTextArea.append(newLine);
     }
 
     private void createTimer() {
