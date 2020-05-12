@@ -91,6 +91,8 @@ public class StoreTest extends TestCase {
     }
 
     public void testCreateOrderNumber() {
+        newStore.addNewOrder(firstOrder);
+        newStore.processOrder(firstOrder);
         
     }
 }
