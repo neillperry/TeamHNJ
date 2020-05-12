@@ -26,7 +26,7 @@ public class Dessert extends FoodItem {
     }
 
     public void setSize(Size size) {
-        size = size;
+        this.size = size;
     }
 
     public void setType(DessertType type) {
