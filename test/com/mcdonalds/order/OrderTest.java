@@ -3,6 +3,7 @@ package com.mcdonalds.order;
 import com.mcdonalds.food.*;
 import com.mcdonalds.user.User;
 import junit.framework.TestCase;
+import java.util.Collection;
 import org.junit.Test;
 import com.mcdonalds.store.Store;
 import com.mcdonalds.user.User;
@@ -66,6 +67,15 @@ public class OrderTest extends TestCase {
         secondOrder.addFoodItem(testCoke);
         secondOrder.addFoodItem(testAdult);
         secondOrder.addFoodItem(testCoke);
+    }
+
+    public void testAddFoodItem() {
+        Collection<FoodItem> firstOrderFoods = firstOrder.getFoodItems();
+        Collection<FoodItem> secondOrderFoods = secondOrder.getFoodItems();
+        Collection<FoodItem> thirdOrderFoods = thirdOrder.getFoodItems();
+        assertEquals(10, firstOrderFoods.size());
+        assertEquals(12, secondOrderFoods.size());
+        assertEquals(0, thirdOrderFoods.size());
     }
 
     public void testCalculatePrice() {

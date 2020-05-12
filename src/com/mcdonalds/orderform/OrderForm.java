@@ -181,7 +181,6 @@ public class OrderForm extends JFrame {
         logoLabel4.setVisible(true);
     }
 
-
     private void createComboBoxes(){
         createBurgerBox();
         createSideBox();
@@ -189,7 +188,6 @@ public class OrderForm extends JFrame {
         createDrinkBox();
         createFinalPanel();
     }
-
 
     private void createBurgerBox() {
         feedbackLabel1.setVisible(false);
@@ -525,7 +523,7 @@ public class OrderForm extends JFrame {
     }
 
     private void createTimer() {
-        timer = new Timer(500, new ActionListener() {
+        timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 count--;

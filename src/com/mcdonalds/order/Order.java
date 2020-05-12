@@ -8,6 +8,7 @@ import com.mcdonalds.food.FoodItem;
 import java.util.Random;
 
 public class Order {
+    // FIELDS
     private Store mainStore;
     private User customer;
     private Collection<FoodItem> foodItems;
