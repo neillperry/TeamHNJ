@@ -397,7 +397,7 @@ public class OrderForm extends JFrame {
                 if (dessertSelBox.getSelectedIndex() != 0 && dessertSizeBox.getSelectedIndex() != 0) {
                     // get the integer values of selected values
                     int selectedDessertIndex = dessertSelBox.getSelectedIndex();
-                    int selectedSizeIndex = sideSizeBox.getSelectedIndex();
+                    int selectedSizeIndex = dessertSizeBox.getSelectedIndex();
                     // convert to Enum values
                     DessertType selectedDessert = DessertType.fromString(dessertOptions[selectedDessertIndex]);
                     Size selectedSize = Size.fromString(sizesArray[selectedSizeIndex]);
@@ -426,7 +426,7 @@ public class OrderForm extends JFrame {
                 if (drinkSelBox.getSelectedIndex() != 0 && drinkSizeBox.getSelectedIndex() != 0) {
                     // get the integer values of selected values
                     int selectedDrinkIndex = drinkSelBox.getSelectedIndex();
-                    int selectedSizeIndex = sideSizeBox.getSelectedIndex();
+                    int selectedSizeIndex = drinkSizeBox.getSelectedIndex();
                     // convert to Enum values
                     DrinkType selectedDrink = DrinkType.fromString(drinkOptions[selectedDrinkIndex]);
                     Size selectedSize = Size.fromString(sizesArray[selectedSizeIndex]);
