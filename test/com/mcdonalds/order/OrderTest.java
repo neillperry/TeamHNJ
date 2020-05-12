@@ -68,10 +68,12 @@ public class OrderTest extends TestCase {
         secondOrder.addFoodItem(testCoke);
     }
 
-    public void testThing() {
-        Store newStore = new Store();
-        User newUser = new User("Bob", 22);
-        Order orderTest = new Order(newStore, newUser);
-        assertEquals(3, 3);
+    public void testCalculatePrice() {
+        firstOrder.calculateTotalPrice();
+        secondOrder.calculateTotalPrice();
+        thirdOrder.calculateTotalPrice();
+        assertEquals(344.5, firstOrder.getTotalPrice(), 0.01);
+        assertEquals(57.5, secondOrder.getTotalPrice(), 0.01);
+        assertEquals(0.0, thirdOrder.getTotalPrice(), 0.01);
     }
 }
