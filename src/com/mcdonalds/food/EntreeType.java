@@ -18,4 +18,13 @@ public enum EntreeType {
     public double price() { return price; }
     public String type() { return type; }
 
+    public static EntreeType fromString(String text) {
+        for (EntreeType ent: EntreeType.values()) {
+            if (ent.type().equals(text)) {
+                return ent;
+            }
+        }
+        return null;
+    }
+
 }

@@ -18,4 +18,13 @@ public enum SideType {
 
     public double price() { return price; }
     public String type() { return type; }
+
+    public static SideType fromString(String text) {
+        for (SideType ent: SideType.values()) {
+            if (ent.type().equals(text)) {
+                return ent;
+            }
+        }
+        return null;
+    }
 }

@@ -19,6 +19,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class OrderForm extends JFrame {
+    private static String newLine = "\n";
     private static String selectOption = "(select item)";
     private static String[] sizesArray = new String[] {
             "Select a Size",
@@ -155,7 +156,7 @@ public class OrderForm extends JFrame {
         ImageIcon mcdonaldsImage = new ImageIcon(this.getClass().getResource("../resources/mcDonaldLogo.jpg"));
         ImageIcon archesImage = new ImageIcon(this.getClass().getResource("../resources/arches.png"));
         ImageIcon cheeseBurgerImage = new ImageIcon(this.getClass().getResource("../resources/cheeseburger.png"));
-        logoLabel1.setIcon(cheeseBurgerImage);
+        logoLabel1.setIcon(mcdonaldsImage);
         logoLabel1.setVisible(true);
 
         logoLabel2.setIcon(archesImage);
@@ -333,16 +334,29 @@ public class OrderForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (burgerSelBox.getSelectedIndex() != 0 && burgerSizeBox.getSelectedIndex() != 0) {
                     updateAllPrices(1.00);
-                    burgerSizeBox.setSelectedIndex(0);
-                    burgerSelBox.setSelectedIndex(0);
+
+
+
+                    int selectedEntreeIndex = burgerSelBox.getSelectedIndex();
+                    int selectedSizeIndex = burgerSizeBox.getSelectedIndex();
+
+                    System.out.println(String.valueOf(selectedEntreeIndex));
+                    System.out.printf(String.valueOf(selectedSizeIndex));
+                    System.out.println(newLine);
+
+                    System.out.println(EntreeType.fromString(burgerOptions[selectedEntreeIndex]));
+                    //EntreeType selectedEntree = EntreeType.valueOf(burgerOptions[selectedEntreeIndex]);
+                    //Size selectedSize = Size.valueOf(sizesArray[selectedSizeIndex]);
+                    //order.addFoodItem(selectedEntree);
+                    //System.out.println(selectedEntree);
+                    //System.out.println(selectedSize);
+                    //Entree newEntree = new Entree(burgerSelBox)
+
+
                     feedbackLabel1.setText("Order Placed!");
                     feedbackLabel1.setVisible(true);
-
-                    int selectedIndex = burgerSelBox.getSelectedIndex();
-                    EntreeType selectedEntree = EntreeType.valueOf(burgerOptions[selectedIndex]);
-
-
-                    //Entree newEntree = new Entree(burgerSelBox)
+                    burgerSizeBox.setSelectedIndex(0);
+                    burgerSelBox.setSelectedIndex(0);
                 }
             }
         });
@@ -357,8 +371,6 @@ public class OrderForm extends JFrame {
                     sideSelBox.setSelectedIndex(0);
                     feedbackLabel2.setText("Order Placed!");
                     feedbackLabel2.setVisible(true);
-                } else {
-
                 }
             }
         });
@@ -373,8 +385,6 @@ public class OrderForm extends JFrame {
                     dessertSelBox.setSelectedIndex(0);
                     feedbackLabel3.setText("Order Placed!");
                     feedbackLabel3.setVisible(true);
-                } else {
-
                 }
             }
         });
@@ -389,8 +399,6 @@ public class OrderForm extends JFrame {
                     drinkSelBox.setSelectedIndex(0);
                     feedbackLabel4.setText("Order Placed!");
                     feedbackLabel4.setVisible(true);
-                } else {
-
                 }
             }
         });

@@ -17,4 +17,13 @@ public enum DrinkType {
 
     public double price() { return price; }
     public String type() { return type; }
+
+    public static DrinkType fromString(String text) {
+        for (DrinkType ent: DrinkType.values()) {
+            if (ent.type().equals(text)) {
+                return ent;
+            }
+        }
+        return null;
+    }
 }

@@ -16,5 +16,14 @@ public enum Size {
     public Double multiplier() { return multiplier; }
     public String type() { return type; }
 
+    public static Size fromString(String text) {
+        for (Size siz: Size.values()) {
+            if (siz.type().equals(text)) {
+                return siz;
+            }
+        }
+        return null;
+    }
+
 }
 

@@ -19,4 +19,13 @@ public enum DessertType {
 
     public String type() { return type; }
 
+    public static DessertType fromString(String text) {
+        for (DessertType ent: DessertType.values()) {
+            if (ent.type().equals(text)) {
+                return ent;
+            }
+        }
+        return null;
+    }
+
 }
