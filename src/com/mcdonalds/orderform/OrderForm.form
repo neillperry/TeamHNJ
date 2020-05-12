@@ -407,7 +407,9 @@
                     <preferred-size width="150" height="50"/>
                   </grid>
                 </constraints>
-                <properties/>
+                <properties>
+                  <columns value="1"/>
+                </properties>
               </component>
               <component id="c399b" class="javax.swing.JLabel" binding="reviewOrderLabel">
                 <constraints>

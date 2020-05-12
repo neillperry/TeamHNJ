@@ -25,6 +25,7 @@ import java.awt.event.ActionListener;
 
 public class OrderForm extends JFrame {
     private static String newLine = "\n";
+    private static String space = " ";
     private static String selectOption = "(select item)";
     private static String[] sizesArray = new String[] {
             "Select a Size",
@@ -354,6 +355,7 @@ public class OrderForm extends JFrame {
                     // update and UI
                     feedbackLabel1.setText("Order Placed!");
                     feedbackLabel1.setVisible(true);
+                    orderReviewTextArea.append(String.valueOf(newEntree.getSize()) +String.valueOf(newEntree.getType()) + newLine);
                     // reset the Size Boxes to Zero
                     burgerSizeBox.setSelectedIndex(0);
                     burgerSelBox.setSelectedIndex(0);
@@ -382,6 +384,7 @@ public class OrderForm extends JFrame {
                     //update UI
                     feedbackLabel2.setText("Order Placed!");
                     feedbackLabel2.setVisible(true);
+                    orderReviewTextArea.append(String.valueOf(newSide.getSize()) +String.valueOf(newSide.getType()) + newLine);
 
                     // reset the Side box values to Zero
                     sideSizeBox.setSelectedIndex(0);
@@ -411,6 +414,7 @@ public class OrderForm extends JFrame {
                     // update UI
                     feedbackLabel3.setText("Order Placed!");
                     feedbackLabel3.setVisible(true);
+                    orderReviewTextArea.append(String.valueOf(newDessert.getSize()) +String.valueOf(newDessert.getType()) + newLine);
                     // reset Size Box values to Zero
                     dessertSizeBox.setSelectedIndex(0);
                     dessertSelBox.setSelectedIndex(0);
@@ -436,6 +440,7 @@ public class OrderForm extends JFrame {
                     order.addFoodItem(newDrink);
                     // update prices
                     updateAllPrices(newDrink.getPrice());
+                    orderReviewTextArea.append(String.valueOf(newDrink.getSize()) +String.valueOf(newDrink.getType()) + newLine);
 
                     // update UI
                     feedbackLabel4.setText("Order Placed!");
