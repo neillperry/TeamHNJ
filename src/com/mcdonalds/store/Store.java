@@ -55,6 +55,8 @@ public class Store {
         placedOrders.add(newOrder);
     }
 
+    public void completeOrder(Order newOrder) { completedOrders.add(newOrder); }
+
     // BUSINESS METHODS
     public int createOrderNumber() {
         Random r = new Random();
