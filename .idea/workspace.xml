@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="" />
+    <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/orderform/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/orderform/OrderForm.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +58,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/mcdonalds/inventory" />
       <recent name="$PROJECT_DIR$/src/com/mcdonalds/resources" />
       <recent name="$PROJECT_DIR$/src/com/mcdonalds/images" />
     </key>

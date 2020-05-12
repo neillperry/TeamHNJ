@@ -10,7 +10,6 @@ import com.mcdonalds.food.DrinkType;
 import com.mcdonalds.food.DessertType;
 import com.mcdonalds.food.SideType;
 
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -146,7 +145,6 @@ public class OrderForm extends JFrame {
         form.setVisible(true);
     }
 
-
     // create Order Form
     public OrderForm(String title) {
         super(title);
@@ -269,7 +267,6 @@ public class OrderForm extends JFrame {
         dessertSizeBox.setVisible(true);
         dessertSizeBox.setEditable(false);
     }
-
 
     private void createDrinkBox() {
         feedbackLabel4.setVisible(false);
