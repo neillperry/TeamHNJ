@@ -99,4 +99,12 @@ public class StoreTest extends TestCase {
         assertEquals(0, completedOrders.size());
     }
 
+    public void testCompletedOrder() {
+        Collection<Order> completedOrders = newStore.getCompletedOrders();
+        newStore.completeOrder(firstOrder);
+        newStore.completeOrder(secondOrder);
+        newStore.completeOrder(thirdOrder);
+        assertEquals(3, completedOrders.size());
+    }
+
 }
