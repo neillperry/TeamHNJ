@@ -19,7 +19,6 @@ public class Order {
         setMainStore(store);
         setCustomer(customer);
         foodItems = new ArrayList<>() {};
-        orderNumber = setOrderNumber();
     }
 
     // ACCESSOR / SETTOR METHODS
@@ -43,11 +42,8 @@ public class Order {
         return totalPrice;
     }
 
-
-    // BUSINESS METHODS
-    public int setOrderNumber() {
-        Random r = new Random();
-        return r.nextInt((999999999-1)+1) + 0;
+    public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     public void calculateTotalPrice() {

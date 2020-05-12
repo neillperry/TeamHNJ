@@ -1,15 +1,13 @@
 package com.mcdonalds.store;
 
-import com.mcdonalds.food.EntreeType;
-import com.mcdonalds.food.SideType;
-import com.mcdonalds.food.DrinkType;
-import com.mcdonalds.food.DessertType;
+import com.mcdonalds.food.*;
 import com.mcdonalds.order.Order;
 import com.mcdonalds.user.User;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Store {
     // STATIC VARIABLES
@@ -41,6 +39,7 @@ public class Store {
 
     // BUSINESS METHODS
     public void processOrder(Order order) {
+        order.setOrderNumber(createOrderNumber());
         collectedSalesTaxes += order.getTotalPrice() * TAXRATE;
         storeRevenue += order.getTotalPrice();
         completedOrders.add(order);
@@ -49,4 +48,11 @@ public class Store {
     public void addNewOrder(Order newOrder) {
         placedOrders.add(newOrder);
     }
+
+    // BUSINESS METHODS
+    public int createOrderNumber() {
+        Random r = new Random();
+        return r.nextInt((999999999-1)+1) + 0;
+    }
+
 }
