@@ -1,19 +1,10 @@
 package com.mcdonalds.orderform;
 
 
+import com.mcdonalds.food.*;
 import com.mcdonalds.user.User;
 import com.mcdonalds.order.Order;
 import com.mcdonalds.store.Store;
-
-import com.mcdonalds.food.Size;
-import com.mcdonalds.food.Entree;
-import com.mcdonalds.food.Side;
-import com.mcdonalds.food.Drink;
-import com.mcdonalds.food.Dessert;
-import com.mcdonalds.food.EntreeType;
-import com.mcdonalds.food.SideType;
-import com.mcdonalds.food.DrinkType;
-import com.mcdonalds.food.DessertType;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
