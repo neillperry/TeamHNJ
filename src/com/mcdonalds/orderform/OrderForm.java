@@ -1,14 +1,19 @@
 package com.mcdonalds.orderform;
 
-import com.mcdonalds.food.*;
-import com.mcdonalds.store.Store;
+
 import com.mcdonalds.user.User;
 import com.mcdonalds.order.Order;
-import com.mcdonalds.food.EntreeType;
+import com.mcdonalds.store.Store;
+
 import com.mcdonalds.food.Size;
+import com.mcdonalds.food.Entree;
+import com.mcdonalds.food.Side;
+import com.mcdonalds.food.Drink;
+import com.mcdonalds.food.Dessert;
+import com.mcdonalds.food.EntreeType;
+import com.mcdonalds.food.SideType;
 import com.mcdonalds.food.DrinkType;
 import com.mcdonalds.food.DessertType;
-import com.mcdonalds.food.SideType;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -24,13 +29,13 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
 public class OrderForm extends JFrame {
-    private static String newLine = "\n";
-    private static String space = " ";
-    private static String selectOption = "(select item)";
-    private static String itemAdded = "Item Added!";
-    private static String decimalFormat = "%.2f";
-    private static String dollarSign = "$";
-    private static String welcomeMessage = "Welcome to McDonalds!";
+    private static final String newLine = "\n";
+    private static final String space = " ";
+    private static final String selectOption = "(select item)";
+    private static final String itemAdded = "Item Added!";
+    private static final String decimalFormat = "%.2f";
+    private static final String dollarSign = "$";
+    private static final String welcomeMessage = "Welcome to McDonalds!";
     private static String[] sizesArray;
     private double totalPrice = 0.00;
 
