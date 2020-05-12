@@ -55,7 +55,7 @@ public class Store {
         completedOrders.add(newOrder);
         newOrder.setIsComplete(true);
     }
-    
+
     public int createOrderNumber() {
         Random r = new Random();
         return r.nextInt((999999999-1)+1) + 0;
