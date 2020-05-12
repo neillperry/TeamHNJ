@@ -143,7 +143,7 @@ public class OrderForm extends JFrame {
         this.pack();
     }
 
-    
+
     private void createUIComponents() {
         createComboBoxes();
         createImageIcons();
