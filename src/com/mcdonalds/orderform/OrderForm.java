@@ -19,7 +19,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class OrderForm extends JFrame {
-    private double totalPrice = 0.00;
     private static String selectOption = "(select item)";
     private static String[] sizesArray = new String[] {
             "Select a Size",
@@ -28,6 +27,7 @@ public class OrderForm extends JFrame {
             Size.LARGE.type()
     };
 
+    private double totalPrice = 0.00;
 
     // Business Variables
     private Store newStore;
@@ -152,18 +152,19 @@ public class OrderForm extends JFrame {
     }
 
     private void createImageIcons() {
-        ImageIcon mcdonaldsLogo = new ImageIcon(this.getClass().getResource("../resources/mcDonaldLogo.jpg"));
-        ImageIcon archesLogo = new ImageIcon(this.getClass().getResource("../resources/arches.png"));
-        logoLabel1.setIcon(mcdonaldsLogo);
+        ImageIcon mcdonaldsImage = new ImageIcon(this.getClass().getResource("../resources/mcDonaldLogo.jpg"));
+        ImageIcon archesImage = new ImageIcon(this.getClass().getResource("../resources/arches.png"));
+        ImageIcon cheeseBurgerImage = new ImageIcon(this.getClass().getResource("../resources/cheeseburger.png"));
+        logoLabel1.setIcon(cheeseBurgerImage);
         logoLabel1.setVisible(true);
 
-        logoLabel2.setIcon(archesLogo);
+        logoLabel2.setIcon(archesImage);
         logoLabel2.setVisible(true);
 
-        logoLabel3.setIcon(mcdonaldsLogo);
+        logoLabel3.setIcon(mcdonaldsImage);
         logoLabel3.setVisible(true);
 
-        logoLabel4.setIcon(mcdonaldsLogo);
+        logoLabel4.setIcon(mcdonaldsImage);
         logoLabel4.setVisible(true);
     }
 
