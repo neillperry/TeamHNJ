@@ -64,10 +64,6 @@ public class StoreTest extends TestCase {
         secondOrder.addFoodItem(testCoke);
         secondOrder.addFoodItem(testAdult);
         secondOrder.addFoodItem(testCoke);
-
-        newStore.addNewOrder(firstOrder);
-        newStore.addNewOrder(secondOrder);
-        newStore.addNewOrder(thirdOrder);
     }
 
     public void testProcessOrderZero() {
@@ -76,6 +72,10 @@ public class StoreTest extends TestCase {
     }
 
     public void testProcessOrders() {
+        newStore.addNewOrder(firstOrder);
+        newStore.addNewOrder(secondOrder);
+        newStore.addNewOrder(thirdOrder);
+
         newStore.processOrder(firstOrder);
         newStore.processOrder(secondOrder);
         newStore.processOrder(thirdOrder);
@@ -84,8 +84,13 @@ public class StoreTest extends TestCase {
     }
 
     public void testAddNewOrder() {
+        newStore.addNewOrder(firstOrder);
+        Collection<Order> receivedOrders = newStore.getPlacedOrders();
+        assertEquals(1, receivedOrders.size());
+
     }
 
     public void testCreateOrderNumber() {
+        
     }
 }

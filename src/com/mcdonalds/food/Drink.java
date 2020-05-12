@@ -32,6 +32,5 @@ public class Drink extends FoodItem {
     public Double getPrice() {
         return price;
     }
-
 }
 

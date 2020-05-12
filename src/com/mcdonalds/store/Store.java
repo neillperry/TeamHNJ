@@ -36,6 +36,9 @@ public class Store {
         return users;
     }
 
+    public Collection<Order> getPlacedOrders() {
+        return placedOrders;
+    }
 
     // BUSINESS METHODS
     public void processOrder(Order order) {
