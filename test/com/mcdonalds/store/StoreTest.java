@@ -72,23 +72,23 @@ public class StoreTest extends TestCase {
     }
 
     public void testProcessOrders() {
-        newStore.addNewOrder(firstOrder);
-        newStore.addNewOrder(secondOrder);
-        newStore.addNewOrder(thirdOrder);
+        newStore.placeOrder(firstOrder);
+        newStore.placeOrder(secondOrder);
+        newStore.placeOrder(thirdOrder);
         Collection<Order> placedOrders = newStore.getPlacedOrders();
         assertEquals(3, placedOrders.size());
     }
 
     public void testAddNewOrder() {
-        newStore.addNewOrder(firstOrder);
+        newStore.placeOrder(firstOrder);
         Collection<Order> receivedOrders = newStore.getPlacedOrders();
         assertEquals(1, receivedOrders.size());
     }
 
     public void testCreateOrderNumber() {
-        newStore.addNewOrder(firstOrder);
+        newStore.placeOrder(firstOrder);
         newStore.processOrder(firstOrder);
-        newStore.addNewOrder(secondOrder);
+        newStore.placeOrder(secondOrder);
         newStore.processOrder(secondOrder);
         assertTrue(firstOrder.getOrderNumber() > 100);
         assertTrue(secondOrder.getOrderNumber() > 100);

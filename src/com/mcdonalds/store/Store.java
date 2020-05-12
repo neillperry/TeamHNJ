@@ -48,16 +48,14 @@ public class Store {
         order.setOrderNumber(createOrderNumber());
         collectedSalesTaxes += order.getTotalPrice() * TAXRATE;
         storeRevenue += order.getTotalPrice();
-        completedOrders.add(order);
+        placedOrders.add(order);
     }
 
-    public void addNewOrder(Order newOrder) {
-        placedOrders.add(newOrder);
+    public void completeOrder(Order newOrder) {
+        completedOrders.add(newOrder);
+        newOrder.setIsComplete(true);
     }
-
-    public void completeOrder(Order newOrder) { completedOrders.add(newOrder); }
-
-    // BUSINESS METHODS
+    
     public int createOrderNumber() {
         Random r = new Random();
         return r.nextInt((999999999-1)+1) + 0;

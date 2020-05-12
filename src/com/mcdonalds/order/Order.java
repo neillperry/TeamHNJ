@@ -13,6 +13,7 @@ public class Order {
     private Collection<FoodItem> foodItems;
     private Double totalPrice = 0.0;
     private int orderNumber;
+    private boolean isComplete = false;
 
     // CONSTRUCTOR
     public Order(Store store, User customer){
@@ -54,6 +55,10 @@ public class Order {
         for (FoodItem food : foodItems) {
             totalPrice += food.getPrice();
         }
+    }
+
+    public void setIsComplete(boolean completeness) {
+        isComplete = completeness;
     }
 
     public void addFoodItem(FoodItem food) {
