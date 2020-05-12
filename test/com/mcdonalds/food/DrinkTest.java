@@ -21,6 +21,17 @@ public class DrinkTest extends TestCase {
     }
 
     @Test
+    public void testGetFoodType() {
+        Drink testCoke = new Drink(DrinkType.COKE, Size.LARGE);
+        Drink testSprite = new Drink(DrinkType.SPRITE, Size.REGULAR);
+        Drink testAdult = new Drink(DrinkType.ADULT_BEVERAGE, SMALL);
+
+        assertEquals(FoodType.DRINK, testCoke.getFoodType());
+        assertEquals(FoodType.DRINK, testAdult.getFoodType());
+        assertEquals(FoodType.DRINK, testSprite.getFoodType());
+    }
+
+    @Test
     public void testGetPrice() {
         Drink testDietCoke = new Drink(DrinkType.DIET_COKE, Size.LARGE);
         Drink testWater = new Drink(DrinkType.WATER, Size.REGULAR);

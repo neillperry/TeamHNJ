@@ -91,12 +91,35 @@ public class StoreTest extends TestCase {
         assertEquals(0, completedOrders.size());
     }
 
-    public void testCompletedOrder() {
+    public void testCompletedOrders() {
         newStore.completeOrder(firstOrder);
         newStore.completeOrder(secondOrder);
         newStore.completeOrder(thirdOrder);
         Collection<Order> completedOrders = newStore.getCompletedOrders();
         assertEquals(3, completedOrders.size());
+        assertTrue(firstOrder.getIsComplete());
+        assertTrue(secondOrder.getIsComplete());
+        assertTrue(thirdOrder.getIsComplete());
+    }
+
+    public void testCalculateSalesTax() {
+        newStore.processOrder(firstOrder);
+        assertEquals(68.9, newStore.getCollectedSalesTax(), 0.01);
+    }
+
+    public void testCalculateSalesTaxZero() {
+        newStore.processOrder(thirdOrder);
+        assertEquals(0.0, newStore.getCollectedSalesTax(), 0.01);
+    }
+
+    public void testCollectMoney() {
+        newStore.processOrder(firstOrder);
+        assertEquals(413.4, newStore.getCollectedRevenue(), 0.01);
+    }
+
+    public void testCollectMoneyZero() {
+        newStore.processOrder(thirdOrder);
+        assertEquals(0.0, newStore.getCollectedRevenue(), 0.01);
     }
 
 }

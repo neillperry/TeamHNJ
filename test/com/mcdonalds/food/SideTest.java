@@ -16,6 +16,17 @@ public class SideTest extends TestCase {
     }
 
     @Test
+    public void testGetFoodType() {
+        Side fries = new Side(SideType.FRIES, Size.LARGE);
+        Side apple = new Side(SideType.APPLE, Size.REGULAR);
+        Side mozzarella = new Side(SideType.MOZZARELLA_STICKS, Size.SMALL);
+
+        assertEquals(FoodType.SIDE, fries.getFoodType());
+        assertEquals(FoodType.SIDE, apple.getFoodType());
+        assertEquals(FoodType.SIDE, mozzarella.getFoodType());
+    }
+
+    @Test
     public void testSetType() {
         Side fries = new Side(SideType.FRIES, Size.LARGE);
         Side apple = new Side(SideType.APPLE, Size.REGULAR);

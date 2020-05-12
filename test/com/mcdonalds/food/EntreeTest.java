@@ -30,6 +30,17 @@ public class EntreeTest extends TestCase {
     }
 
     @Test
+    public void testGetFoodType() {
+        Entree burger = new Entree(EntreeType.HAMBURGER, Size.LARGE);
+        Entree cheeseBurger = new Entree(EntreeType.CHEESEBURGER, Size.REGULAR);
+        Entree mystery = new Entree(EntreeType.MYSTERY, Size.SMALL);
+
+        assertEquals(FoodType.ENTREE, burger.getFoodType());
+        assertEquals(FoodType.ENTREE, cheeseBurger.getFoodType());
+        assertEquals(FoodType.ENTREE, mystery.getFoodType());
+    }
+
+    @Test
     public void testSetType() {
         Entree burger = new Entree(EntreeType.HAMBURGER, Size.LARGE);
         Entree cheeseBurger = new Entree(EntreeType.CHEESEBURGER, Size.REGULAR);

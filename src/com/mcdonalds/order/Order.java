@@ -52,14 +52,16 @@ public class Order {
         return orderNumber;
     }
 
+    public void setIsComplete(boolean completeness) {
+        isComplete = completeness;
+    }
+
+    public boolean getIsComplete() { return isComplete; }
+
     public void calculateTotalPrice() {
         for (FoodItem food : foodItems) {
             totalPrice += food.getPrice();
         }
-    }
-
-    public void setIsComplete(boolean completeness) {
-        isComplete = completeness;
     }
 
     public void addFoodItem(FoodItem food) {

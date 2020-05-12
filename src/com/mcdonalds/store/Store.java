@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class Store {
     // STATIC VARIABLES
-    public static final double TAXRATE = 0.2001;
+    public static final double TAXRATE = 0.2;
 
     // FIELDS
     private Collection<Order> placedOrders;
@@ -40,20 +40,26 @@ public class Store {
         return placedOrders;
     }
 
+    public double getCollectedSalesTax() { return collectedSalesTaxes; }
+
+    public double getCollectedRevenue() { return storeRevenue; }
+
     // BUSINESS METHODS
     public void processOrder(Order order) {
-        // FOOD ITEMS OF EACH ORDER
-        //order.getFoodItems();
-
         order.setOrderNumber(createOrderNumber());
-        collectedSalesTaxes += order.getTotalPrice() * TAXRATE;
-        storeRevenue += order.getTotalPrice();
+        collectMoney(order);
         placedOrders.add(order);
     }
 
     public void completeOrder(Order newOrder) {
         completedOrders.add(newOrder);
         newOrder.setIsComplete(true);
+    }
+
+    public void collectMoney(Order order) {
+        order.calculateTotalPrice();
+        collectedSalesTaxes += order.getTotalPrice() * TAXRATE;
+        storeRevenue += order.getTotalPrice() + collectedSalesTaxes;
     }
 
     public int createOrderNumber() {

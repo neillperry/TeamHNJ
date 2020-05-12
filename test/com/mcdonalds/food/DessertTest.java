@@ -19,6 +19,17 @@ public class DessertTest extends TestCase {
         assertEquals(DessertType.FROSTED_TATER_TOTS, taterTots.getType());
     }
 
+    @Test
+    public void testGetFoodType() {
+        Dessert cookie = new Dessert(DessertType.COOKIE, Size.SMALL);
+        Dessert applePie = new Dessert(DessertType.APPLE_PIE, Size.REGULAR);
+        Dessert taterTots = new Dessert(DessertType.FROSTED_TATER_TOTS, Size.SMALL);
+
+        assertEquals(FoodType.DESSERT, cookie.getFoodType());
+        assertEquals(FoodType.DESSERT, applePie.getFoodType());
+        assertEquals(FoodType.DESSERT, taterTots.getFoodType());
+    }
+
 
     public void testCalculatePrice() {
         Dessert cookie = new Dessert(DessertType.COOKIE, Size.LARGE);
