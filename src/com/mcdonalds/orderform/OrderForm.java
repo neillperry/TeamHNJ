@@ -247,6 +247,7 @@ public class OrderForm extends JFrame {
         dessertSelBox.addItem(dessertOptions[2]);
         dessertSelBox.addItem(dessertOptions[3]);
         dessertSelBox.addItem(dessertOptions[4]);
+        dessertSelBox.addItem(dessertOptions[5]);
 
         dessertSelBox.setSelectedIndex(0);
         dessertSelBox.setVisible(true);
@@ -272,6 +273,7 @@ public class OrderForm extends JFrame {
         drinkSelBox.addItem(drinkOptions[2]);
         drinkSelBox.addItem(drinkOptions[3]);
         drinkSelBox.addItem(drinkOptions[4]);
+        drinkSelBox.addItem(drinkOptions[5]);
 
         drinkSelBox.setSelectedIndex(0);
         drinkSelBox.setVisible(true);
@@ -355,7 +357,14 @@ public class OrderForm extends JFrame {
                     // update and UI
                     feedbackLabel1.setText("Order Placed!");
                     feedbackLabel1.setVisible(true);
-                    orderReviewTextArea.append(String.valueOf(newEntree.getSize()) +String.valueOf(newEntree.getType()) + newLine);
+                    orderReviewTextArea.append(
+                            newEntree.getSize().type() +
+                                    space +
+                                    newEntree.getType().type() +
+                                    space +
+                                    String.valueOf(newEntree.getPrice()) +
+                                    newLine);
+
                     // reset the Size Boxes to Zero
                     burgerSizeBox.setSelectedIndex(0);
                     burgerSelBox.setSelectedIndex(0);
@@ -384,7 +393,13 @@ public class OrderForm extends JFrame {
                     //update UI
                     feedbackLabel2.setText("Order Placed!");
                     feedbackLabel2.setVisible(true);
-                    orderReviewTextArea.append(String.valueOf(newSide.getSize()) +String.valueOf(newSide.getType()) + newLine);
+                    orderReviewTextArea.append(
+                            newSide.getSize().type() +
+                                    space +
+                                    newSide.getType().type() +
+                                    space +
+                                    String.valueOf(newSide.getPrice()) +
+                            newLine);
 
                     // reset the Side box values to Zero
                     sideSizeBox.setSelectedIndex(0);
@@ -414,7 +429,15 @@ public class OrderForm extends JFrame {
                     // update UI
                     feedbackLabel3.setText("Order Placed!");
                     feedbackLabel3.setVisible(true);
-                    orderReviewTextArea.append(String.valueOf(newDessert.getSize()) +String.valueOf(newDessert.getType()) + newLine);
+                    /* orderReviewTextArea.append(
+                            newDessert.getSize().type() +
+                                    space +
+                                    newDessert.getType().type() +
+                                    space +
+                                    String.valueOf(newDessert.getPrice()) +
+                                    newLine);
+
+                     */
                     // reset Size Box values to Zero
                     dessertSizeBox.setSelectedIndex(0);
                     dessertSelBox.setSelectedIndex(0);
@@ -440,7 +463,13 @@ public class OrderForm extends JFrame {
                     order.addFoodItem(newDrink);
                     // update prices
                     updateAllPrices(newDrink.getPrice());
-                    orderReviewTextArea.append(String.valueOf(newDrink.getSize()) +String.valueOf(newDrink.getType()) + newLine);
+                    orderReviewTextArea.append(
+                            newDrink.getSize().type() +
+                                    space +
+                                    newDrink.getType().type() +
+                                    space +
+                                    String.valueOf(newDrink.getPrice()) +
+                                    newLine);
 
                     // update UI
                     feedbackLabel4.setText("Order Placed!");
