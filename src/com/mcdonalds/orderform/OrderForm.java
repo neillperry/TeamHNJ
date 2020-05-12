@@ -1,5 +1,11 @@
 package com.mcdonalds.orderform;
 
+import com.mcdonalds.food.*;
+import com.mcdonalds.store.Store;
+import com.mcdonalds.user.User;
+import com.mcdonalds.order.Order;
+
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -8,98 +14,137 @@ import javax.swing.JButton;
 import javax.swing.JTabbedPane;
 import javax.swing.ImageIcon;
 import javax.swing.JTextArea;
-import java.awt.*;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class OrderForm extends JFrame {
-    private static String[] sizesArray = new String[] {"Select a Size", "Small", "Regular", "Large"};
     private double totalPrice = 0.00;
+    private static String selectOption = "(select item)";
+    private static String[] sizesArray = new String[] {
+            "Select a Size",
+            Size.SMALL.type(),
+            Size.REGULAR.type(),
+            Size.LARGE.type()
+    };
 
+
+    // Business Variables
+    private Store newStore;
+    private User user;
+    private Order order;
+
+
+    // Main Tabbed Panel
     private JTabbedPane tabbedPane;
     private JPanel mainPanel;
 
+    // Burger Panel
     private JPanel burgers;
     private JButton addOrder1;
     private JLabel totalLabel1;
     private JLabel priceLabel1;
     private JLabel logoLabel1;
     private JComboBox burgerSelBox;
-    private static String[] burgerOptions = new String[] {"(select item)", "hamburger", "cheeseburger", "chicken sandwich", "chicken nuggets", "Mystery" };
     private JComboBox burgerSizeBox;
+    private JLabel feedbackLabel1;
+    private static String[] burgerOptions = new String[] {
+            selectOption,
+            EntreeType.HAMBURGER.type(),
+            EntreeType.CHEESEBURGER.type(),
+            EntreeType.CHICKEN_SANDWICH.type(),
+            EntreeType.CHICKEN_NUGGETS.type(),
+            EntreeType.MYSTERY.type()
+    };
 
+
+    // Sides Panel
     private JPanel sides;
     private JButton addOrder2;
     private JLabel totalLabel2;
     private JLabel priceLabel2;
     private JLabel logoLabel2;
     private JComboBox sideSelBox;
-    private static String[] sideOptions = new String[] {"(select item)", "fries", "apples", "salad", "onion rings", "mozzarella sticks", "Surprise Side" };
     private JComboBox sideSizeBox;
+    private JLabel feedbackLabel2;
+    private static String[] sideOptions = new String[] {
+            selectOption,
+            SideType.FRIES.type(),
+            SideType.APPLE.type(),
+            SideType.SALAD.type(),
+            SideType.ONION_RINGS.type(),
+            SideType.MOZZARELLA_STICKS.type(),
+            SideType.MYSTERY.type()
+    };
 
+
+    // Dessert Panel
     private JPanel desserts;
     private JButton addOrder3;
     private JLabel totalLabel3;
     private JLabel priceLabel3;
     private JLabel logoLabel3;
     private JComboBox dessertSelBox;
-    private static String[] dessertOptions = new String[] {"select item", "apple pie", "ice cream", "birthday cake", "hot cookies", "Mystery"};
     private JComboBox dessertSizeBox;
+    private JLabel feedbackLabel3;
+    private static String[] dessertOptions = new String[] {
+            selectOption,
+            DessertType.APPLE_PIE.type(),
+            DessertType.ICE_CREAM.type(),
+            DessertType.COOKIE.type(),
+            DessertType.BIRTHDAY_CAKE.type(),
+            DessertType.FROSTED_TATER_TOTS.type()
+    };
 
+
+    // Drink Panel
     private JPanel drinks;
     private JButton addOrder4;
     private JLabel totalLabel4;
     private JLabel priceLabel4;
     private JLabel logoLabel4;
     private JComboBox drinkSelBox;
-    private static String[] drinkOptions = new String[] {"select item", "Coke", "Sprite", "Diet Coke", "Adult Beverage"};
     private JComboBox drinkSizeBox;
+    private JLabel feedbackLabel4;
+    private static String[] drinkOptions = new String[] {
+            selectOption,
+            DrinkType.COKE.type(),
+            DrinkType.DIET_COKE.type(),
+            DrinkType.SPRITE.type(),
+            DrinkType.WATER.type(),
+            DrinkType.ADULT_BEVERAGE.type()
+    };
 
+
+    // Final Order Panel
     private JPanel finalOrder;
     private JButton orderButton5;
     private JLabel totalLabel5;
     private JLabel priceLabel5;
     private JLabel logoLabel5;
     private JTextArea orderReviewTextArea;
-    private JLabel feedbackLabel2;
-    private JLabel feedbackLabel1;
-    private JLabel feedbackLabel3;
-    private JLabel feedbackLabel4;
-
-
-    public OrderForm(String title) {
-        super(title);
-        createUIComponents();
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(tabbedPane);
-        this.pack();
-    }
+    private JLabel reviewOrderLabel;
 
 
     public static void main(String[] args) {
         // Creates the GUI interface
         OrderForm form = new OrderForm("Welcome to McDonald's!");
         form.setVisible(true);
-
-
-        /*
-        *
-        *   1. Create an instance of Store
-        *   2. Create an instance of Order
-        *
-        *     Order newOrder = new Order();
-        *
-        *     updateAllPrices(newOrder.calculatePrice());
-        *
-        *   3. Create an instance of user
-        *
-        *
-        * */
     }
 
 
+    // create Order Form
+    public OrderForm(String title) {
+        super(title);
+        createBusinessVariables();
+        createUIComponents();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(tabbedPane);
+        this.pack();
+    }
+
+    
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         createComboBoxes();
         createImageIcons();
         addOrderButtonListeners();
@@ -135,6 +180,7 @@ public class OrderForm extends JFrame {
     private void createBurgerBox() {
         feedbackLabel1.setVisible(false);
         feedbackLabel1.setForeground(Color.GREEN);
+        feedbackLabel1.setBackground(Color.GREEN);
 
         burgerSelBox.addItem(burgerOptions[0]);
         burgerSelBox.addItem(burgerOptions[1]);
@@ -234,6 +280,7 @@ public class OrderForm extends JFrame {
     }
 
 
+    // Hide Feeedback Label when Size Box is set to != first element
     private void addSizeBoxListeners() {
         // ENTREES
         burgerSizeBox.addActionListener(new ActionListener () {
@@ -277,6 +324,7 @@ public class OrderForm extends JFrame {
     }
 
 
+    // Place Order Action Listeners
     private void addOrderButtonListeners() {
         //ENTREES
         addOrder1.addActionListener(new ActionListener() {
@@ -288,8 +336,12 @@ public class OrderForm extends JFrame {
                     burgerSelBox.setSelectedIndex(0);
                     feedbackLabel1.setText("Order Placed!");
                     feedbackLabel1.setVisible(true);
-                } else {
 
+                    int selectedIndex = burgerSelBox.getSelectedIndex();
+                    EntreeType selectedEntree = EntreeType.valueOf(burgerOptions[selectedIndex]);
+
+
+                    //Entree newEntree = new Entree(burgerSelBox)
                 }
             }
         });
@@ -353,7 +405,11 @@ public class OrderForm extends JFrame {
         priceLabel5.setText(String.valueOf(totalPrice));
     }
 
-
+    private void createBusinessVariables() {
+        newStore = new Store();
+        user = new User("Bob", 22);
+        order = new Order(newStore, user);
+    }
 
 }
 
