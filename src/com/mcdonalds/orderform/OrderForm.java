@@ -393,6 +393,7 @@ public class OrderForm extends JFrame {
                     // update and UI
                     feedbackLabel1.setText(itemAdded);
                     feedbackLabel1.setVisible(true);
+                    feedbackLabel5.setVisible(false);
                 }
             }
         });
@@ -429,6 +430,7 @@ public class OrderForm extends JFrame {
                     //update UI
                     feedbackLabel2.setText(itemAdded);
                     feedbackLabel2.setVisible(true);
+                    feedbackLabel5.setVisible(false);
                 }
             }
         });
@@ -465,7 +467,7 @@ public class OrderForm extends JFrame {
                     // update UI
                     feedbackLabel3.setText(itemAdded);
                     feedbackLabel3.setVisible(true);
-
+                    feedbackLabel5.setVisible(false);
                 }
             }
         });
@@ -501,6 +503,7 @@ public class OrderForm extends JFrame {
                     // update UI
                     feedbackLabel4.setText(itemAdded);
                     feedbackLabel4.setVisible(true);
+                    feedbackLabel5.setVisible(false);
                 }
             }
         });
@@ -522,6 +525,7 @@ public class OrderForm extends JFrame {
                     timer.setInitialDelay(0);
                     timer.start();
                 } else {
+                    orderReviewTextArea.append(newLine + "START A NEW ORDER" + newLine);
                     feedbackLabel5.setText("ERROR: Insufficient Inventory!!");
                     feedbackLabel5.setVisible(true);
                     readyLabel.setText("Please Order Less Food!");
@@ -535,11 +539,12 @@ public class OrderForm extends JFrame {
 
     private void updateAllPrices(double newPrice) {
         totalPrice += newPrice;
-        priceLabel1.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
-        priceLabel2.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
-        priceLabel3.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
-        priceLabel4.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
-        priceLabel5.setText(dollarSign + space + String.format(decimalFormat, totalPrice));
+        String formattedPrice = dollarSign+ space + String.format(decimalFormat, totalPrice);
+        priceLabel1.setText(formattedPrice);
+        priceLabel2.setText(formattedPrice);
+        priceLabel3.setText(formattedPrice);
+        priceLabel4.setText(formattedPrice);
+        priceLabel5.setText(formattedPrice);
     }
 
     private void createBusinessVariables() {
@@ -562,7 +567,6 @@ public class OrderForm extends JFrame {
         feedbackLabel2.setVisible(false);
         feedbackLabel3.setVisible(false);
         feedbackLabel4.setVisible(false);
-        feedbackLabel5.setVisible(false);
     }
 
     private void createTimer() {
