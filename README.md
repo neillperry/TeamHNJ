@@ -29,4 +29,7 @@ Update the store inventory with each order
 ## Current Status
 At the end of the week, we were able to accomplish almost all phases. We decided against customizing orders (Phase 3) due to increased complexity. 
 
-Also, we took care to create and run unit tests throughout development. In the future, we would need to create integration tests as well as create tests for the UI.
+Also, we took care to create and run unit tests throughout development. 
+
+##Future Direction
+In the future, we would need to create integration tests as well as create tests for the UI. Also, if we had time, we might create a separate UI for the Store so that the Store Manager could monitor Inventory status.
