@@ -556,7 +556,7 @@ public class OrderForm extends JFrame {
 
     private void addItemToTextArea(String size, String dish, double price) {
         orderReviewTextArea.append(size + space + dish + space +
-                String.format(decimalFormat, price)+ newLine);
+                String.format(decimalFormat, price) + newLine);
     }
 
     private String createFinalPriceBreakdown(Order order) {
@@ -630,6 +630,5 @@ public class OrderForm extends JFrame {
                 DrinkType.ADULT_BEVERAGE.type()
         };
     }
-
 }
 
