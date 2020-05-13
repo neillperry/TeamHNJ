@@ -1,6 +1,5 @@
 package com.mcdonalds.food;
 
-import com.mcdonalds.food.DrinkType;
 
 public class Drink extends FoodItem {
     private DrinkType type;

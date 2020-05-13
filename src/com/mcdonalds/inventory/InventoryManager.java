@@ -259,11 +259,6 @@ public class InventoryManager {
                 }
             }
         }
-
-        if (itemsProcessable.isEmpty()){
-
-        }
-
     }
     // Used with "calcInventoryRemain()"
     private void calcInventoryStoreResult(MenuInventory foodItem, int... result){

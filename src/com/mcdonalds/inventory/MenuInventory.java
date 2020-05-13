@@ -1,5 +1,8 @@
 package com.mcdonalds.inventory;
-
+/**
+ * This enum is used to store data of inventory
+ * Instances of this enum have to be same as "MenuOrder" enum and "MenuTempStorage" enum
+ * */
 public enum MenuInventory {
 
     HAMBURGER(0, 0, 0),
@@ -23,6 +26,7 @@ public enum MenuInventory {
 
     COKE(0, 0, 0),
     SPRITE(0, 0,0),
+    WATER(0, 0, 0),
     DIET_COKE(0, 0, 0),
     ADULT_BEVERAGE(0, 0, 0);
 

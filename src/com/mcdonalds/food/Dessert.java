@@ -1,7 +1,5 @@
 package com.mcdonalds.food;
 
-import java.util.HashMap;
-
 public class Dessert extends FoodItem {
     private DessertType type;
     private Double price;

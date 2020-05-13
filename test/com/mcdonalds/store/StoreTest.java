@@ -1,9 +1,23 @@
 package com.mcdonalds.store;
 
+
+import junit.framework.TestCase;
 import com.mcdonalds.user.User;
 import com.mcdonalds.order.Order;
-import junit.framework.TestCase;
-import com.mcdonalds.food.*;
+import com.mcdonalds.store.Store;
+import com.mcdonalds.food.Size;
+import com.mcdonalds.food.FoodItem;
+import com.mcdonalds.food.FoodType;
+
+import com.mcdonalds.food.DessertType;
+import com.mcdonalds.food.Dessert;
+import com.mcdonalds.food.Entree;
+import com.mcdonalds.food.EntreeType;
+import com.mcdonalds.food.Side;
+import com.mcdonalds.food.SideType;
+import com.mcdonalds.food.Drink;
+import com.mcdonalds.food.DrinkType;
+
 import java.util.Collection;
 
 public class StoreTest extends TestCase {
@@ -66,22 +80,22 @@ public class StoreTest extends TestCase {
         secondOrder.addFoodItem(testCoke);
     }
 
-    public void testProcessOrderZero() {
+    public void testClearOrderZero() {
         Collection<Order> placedOrders = newStore.getPlacedOrders();
         assertEquals(0, placedOrders.size());
     }
 
-    public void testProcessOrders() {
-        newStore.processOrder(firstOrder);
-        newStore.processOrder(secondOrder);
-        newStore.processOrder(thirdOrder);
+    public void testClearOrders() {
+        newStore.clearOrder(firstOrder);
+        newStore.clearOrder(secondOrder);
+        newStore.clearOrder(thirdOrder);
         Collection<Order> placedOrders = newStore.getPlacedOrders();
         assertEquals(3, placedOrders.size());
     }
 
     public void testCreateOrderNumber() {
-        newStore.processOrder(firstOrder);
-        newStore.processOrder(secondOrder);
+        newStore.clearOrder(firstOrder);
+        newStore.clearOrder(secondOrder);
         assertTrue(firstOrder.getOrderNumber() > 100);
         assertTrue(secondOrder.getOrderNumber() > 100);
     }
@@ -103,22 +117,22 @@ public class StoreTest extends TestCase {
     }
 
     public void testCalculateSalesTax() {
-        newStore.processOrder(firstOrder);
+        newStore.clearOrder(firstOrder);
         assertEquals(68.9, newStore.getCollectedSalesTax(), 0.01);
     }
 
     public void testCalculateSalesTaxZero() {
-        newStore.processOrder(thirdOrder);
+        newStore.clearOrder(thirdOrder);
         assertEquals(0.0, newStore.getCollectedSalesTax(), 0.01);
     }
 
     public void testCollectMoney() {
-        newStore.processOrder(firstOrder);
+        newStore.clearOrder(firstOrder);
         assertEquals(413.4, newStore.getCollectedRevenue(), 0.01);
     }
 
     public void testCollectMoneyZero() {
-        newStore.processOrder(thirdOrder);
+        newStore.clearOrder(thirdOrder);
         assertEquals(0.0, newStore.getCollectedRevenue(), 0.01);
     }
 

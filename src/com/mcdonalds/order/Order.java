@@ -13,6 +13,7 @@ public class Order {
     private User customer;
     private Collection<FoodItem> foodItems;
     private Double totalPrice = 0.0;
+    private double tax = 0.0;
     private int orderNumber;
     private boolean isComplete = false;
 
@@ -57,6 +58,8 @@ public class Order {
     }
 
     public boolean getIsComplete() { return isComplete; }
+
+    public void setTax(double calculatedTax) {this.tax = calculatedTax; }
 
     public void calculateTotalPrice() {
         for (FoodItem food : foodItems) {

@@ -1,10 +1,21 @@
 package com.mcdonalds.orderform;
 
 
-import com.mcdonalds.food.*;
 import com.mcdonalds.user.User;
 import com.mcdonalds.order.Order;
 import com.mcdonalds.store.Store;
+import com.mcdonalds.food.Size;
+import com.mcdonalds.food.FoodItem;
+import com.mcdonalds.food.FoodType;
+
+import com.mcdonalds.food.DessertType;
+import com.mcdonalds.food.Dessert;
+import com.mcdonalds.food.Entree;
+import com.mcdonalds.food.EntreeType;
+import com.mcdonalds.food.Side;
+import com.mcdonalds.food.SideType;
+import com.mcdonalds.food.Drink;
+import com.mcdonalds.food.DrinkType;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -500,7 +511,7 @@ public class OrderForm extends JFrame {
         orderButton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                newStore.processOrder(order);
+                newStore.clearOrder(order);
                 feedbackLabel5.setText("ORDER PLACED!!!");
                 feedbackLabel5.setVisible(true);
                 readyLabel.setText("Your Order Will Be Ready Soon!");
@@ -556,6 +567,7 @@ public class OrderForm extends JFrame {
         feedbackLabel2.setVisible(false);
         feedbackLabel3.setVisible(false);
         feedbackLabel4.setVisible(false);
+        feedbackLabel5.setVisible(false);
     }
 
     private void createTimer() {
@@ -572,6 +584,32 @@ public class OrderForm extends JFrame {
                 }
             }
         });
+    }
+
+    private String createFinalPriceBreakdown(Order order) {
+        String returnString;
+        returnString = newLine +
+                "SUB TOTAL: " +
+                dollarSign +
+                space +
+                newLine +
+                String.format(decimalFormat, order.getTotalPrice()) +
+                "TAXES: " +
+                dollarSign +
+                space +
+                String.format(decimalFormat, order.getTotalPrice()) +
+                newLine +
+                "TOTAL PRICE: " +
+                dollarSign +
+                space +
+                String.format(decimalFormat, order.getTotalPrice()) +
+                newLine +
+                "Order Number: " +
+                "#" +
+                space +
+                String.valueOf(order.getOrderNumber()) +
+                newLine;
+        return returnString;
     }
 
     private void createArrays() {

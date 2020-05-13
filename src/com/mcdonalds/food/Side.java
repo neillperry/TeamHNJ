@@ -1,8 +1,5 @@
 package com.mcdonalds.food;
 
-import java.util.HashMap;
-import com.mcdonalds.food.SideType.*;
-
 public class Side extends FoodItem {
     private SideType type;
     private Size size;
