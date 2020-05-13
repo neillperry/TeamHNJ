@@ -132,7 +132,7 @@ public class OrderForm extends JFrame {
         logoLabel1.setIcon(mcdonaldsImage);
         logoLabel1.setVisible(true);
 
-        logoLabel2.setIcon(archesImage);
+        logoLabel2.setIcon(mcdonaldsImage);
         logoLabel2.setVisible(true);
 
         logoLabel3.setIcon(mcdonaldsImage);
