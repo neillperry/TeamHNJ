@@ -525,7 +525,7 @@ public class OrderForm extends JFrame {
                     timer.setInitialDelay(0);
                     timer.start();
                 } else {
-                    orderReviewTextArea.append(newLine + "START A NEW ORDER" + newLine);
+                    orderReviewTextArea.append(newLine + "ORDER CANCELLED" + newLine + "START A NEW ORDER" + newLine);
                     feedbackLabel5.setText("ERROR: Insufficient Inventory!!");
                     feedbackLabel5.setVisible(true);
                     readyLabel.setText("Please Order Less Food!");
@@ -539,7 +539,7 @@ public class OrderForm extends JFrame {
 
     private void updateAllPrices(double newPrice) {
         totalPrice += newPrice;
-        String formattedPrice = dollarSign+ space + String.format(decimalFormat, totalPrice);
+        String formattedPrice = dollarSign + space + String.format(decimalFormat, totalPrice);
         priceLabel1.setText(formattedPrice);
         priceLabel2.setText(formattedPrice);
         priceLabel3.setText(formattedPrice);
