@@ -17,7 +17,6 @@ import com.mcdonalds.food.SideType;
 import com.mcdonalds.food.Drink;
 import com.mcdonalds.food.DrinkType;
 
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
@@ -40,12 +39,9 @@ public class Store {
 
     // CONSTRUCTOR
     public Store() {
-        users = new ArrayList<>() {
-        };
-        placedOrders = new ArrayList<>() {
-        };
-        completedOrders = new ArrayList<>() {
-        };
+        users = new ArrayList<>() {};
+        placedOrders = new ArrayList<>() {};
+        completedOrders = new ArrayList<>() {};
     }
 
     // ACCESSOR / SETTOR METHODS

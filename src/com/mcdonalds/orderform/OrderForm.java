@@ -5,8 +5,6 @@ import com.mcdonalds.user.User;
 import com.mcdonalds.order.Order;
 import com.mcdonalds.store.Store;
 import com.mcdonalds.food.Size;
-import com.mcdonalds.food.FoodItem;
-import com.mcdonalds.food.FoodType;
 
 import com.mcdonalds.food.DessertType;
 import com.mcdonalds.food.Dessert;
