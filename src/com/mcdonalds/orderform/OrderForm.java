@@ -528,10 +528,10 @@ public class OrderForm extends JFrame {
         updateAllPrices(totalPrice);
         order = new Order(newStore, user);
         orderReviewTextArea.append(newLine);
-        hideFeedbackLabesl();
+        hideFeedbackLabels();
     }
 
-    private void hideFeedbackLabesl() {
+    private void hideFeedbackLabels() {
         feedbackLabel1.setVisible(false);
         feedbackLabel2.setVisible(false);
         feedbackLabel3.setVisible(false);
