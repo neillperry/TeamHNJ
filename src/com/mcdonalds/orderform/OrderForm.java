@@ -26,6 +26,7 @@ import javax.swing.JTextArea;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import javax.swing.Timer;
 
 public class OrderForm extends JFrame {
@@ -135,9 +136,9 @@ public class OrderForm extends JFrame {
     }
 
     private void createImageIcons() {
-        ImageIcon mcdonaldsImage = new ImageIcon(this.getClass().getResource("../resources/mcDonaldLogo.jpg"));
-        ImageIcon archesImage = new ImageIcon(this.getClass().getResource("../resources/arches.png"));
-        ImageIcon cheeseBurgerImage = new ImageIcon(this.getClass().getResource("../resources/cheeseburger.png"));
+        URL imageURL = ClassLoader.getSystemResource("mcDonaldLogo.jpg");
+        ImageIcon mcdonaldsImage = new ImageIcon(imageURL);
+
         logoLabel1.setIcon(mcdonaldsImage);
         logoLabel1.setVisible(true);
 

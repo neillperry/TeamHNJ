@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TeamHNJ:jar">
+    <output-path>$PROJECT_DIR$/artifacts/TeamHNJ_jar</output-path>
+    <root id="archive" name="TeamHNJ.jar">
+      <element id="module-output" name="TeamHNJ" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit-4.12.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
