@@ -378,15 +378,7 @@ public class OrderForm extends JFrame {
                     order.addFoodItem(newEntree);
                     // update prices
                     updateAllPrices(newEntree.getPrice());
-
-                    orderReviewTextArea.append(
-                            newEntree.getSize().type() +
-                                    space +
-                                    newEntree.getType().type() +
-                                    space +
-                                    String.format(decimalFormat, newEntree.getPrice()) +
-                                    newLine);
-
+                    addItemToTextArea(newEntree.getSize().type(), newEntree.getType().type(), newEntree.getPrice());
                     // reset the Size Boxes to Zero
                     burgerSizeBox.setSelectedIndex(0);
                     burgerSelBox.setSelectedIndex(0);
@@ -415,15 +407,7 @@ public class OrderForm extends JFrame {
                     order.addFoodItem(newSide);
                     // update prices
                     updateAllPrices(newSide.getPrice());
-
-                    orderReviewTextArea.append(
-                            newSide.getSize().type() +
-                                    space +
-                                    newSide.getType().type() +
-                                    space +
-                                    String.format(decimalFormat, newSide.getPrice()) +
-                            newLine);
-
+                    addItemToTextArea(newSide.getSize().type(), newSide.getType().type(), newSide.getPrice());
                     // reset the Side box values to Zero
                     sideSizeBox.setSelectedIndex(0);
                     sideSelBox.setSelectedIndex(0);
@@ -452,15 +436,7 @@ public class OrderForm extends JFrame {
                     order.addFoodItem(newDessert);
                     // update prices
                     updateAllPrices(newDessert.getPrice());
-
-                    orderReviewTextArea.append(
-                            newDessert.getSize().type() +
-                                    space +
-                                    newDessert.getType().type() +
-                                    space +
-                                    String.format(decimalFormat, newDessert.getPrice()) +
-                                    newLine);
-
+                    addItemToTextArea(newDessert.getSize().type(), newDessert.getType().type(), newDessert.getPrice());
                     // reset Size Box values to Zero
                     dessertSizeBox.setSelectedIndex(0);
                     dessertSelBox.setSelectedIndex(0);
@@ -489,14 +465,7 @@ public class OrderForm extends JFrame {
                     order.addFoodItem(newDrink);
                     // update prices
                     updateAllPrices(newDrink.getPrice());
-                    orderReviewTextArea.append(
-                            newDrink.getSize().type() +
-                                    space +
-                                    newDrink.getType().type() +
-                                    space +
-                                    String.format(decimalFormat, newDrink.getPrice()) +
-                                    newLine);
-
+                    addItemToTextArea(newDrink.getSize().type(), newDrink.getType().type(), newDrink.getPrice());
                     // reset Side Box values to Zero
                     drinkSizeBox.setSelectedIndex(0);
                     drinkSelBox.setSelectedIndex(0);
@@ -585,6 +554,11 @@ public class OrderForm extends JFrame {
         });
     }
 
+    private void addItemToTextArea(String size, String dish, double price) {
+        orderReviewTextArea.append(size + space + dish + space +
+                String.format(decimalFormat, price)+ newLine);
+    }
+
     private String createFinalPriceBreakdown(Order order) {
         String returnString;
         returnString = newLine +
@@ -603,7 +577,7 @@ public class OrderForm extends JFrame {
                 space +
                 String.format(decimalFormat, order.getFinalPrice()) +
                 newLine +
-                newLine + 
+                newLine +
                 "Order Number: " +
                 "#" +
                 space +
@@ -656,5 +630,6 @@ public class OrderForm extends JFrame {
                 DrinkType.ADULT_BEVERAGE.type()
         };
     }
+
 }
 
