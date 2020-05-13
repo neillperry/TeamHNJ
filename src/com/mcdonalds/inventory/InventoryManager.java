@@ -178,7 +178,8 @@ public class InventoryManager {
 
              // This is the option for processing order even if not fully processable
          case 1:
-             if (statusOrderProcessable == STATUS_ORDER_PROC_NOT_FULLY_PROCESSABLE){
+             if ((statusOrderProcessable == STATUS_ORDER_PROC_NOT_FULLY_PROCESSABLE)
+                     ||(statusOrderProcessable == STATUS_ORDER_PROC_FULLY_PROCESSABLE)){
                  for(MenuInventory i: MenuInventory.values()){
                      for (MenuTempStorage j: MenuTempStorage.values()){
                          if (i.name().equals(j.name())){
@@ -259,6 +260,11 @@ public class InventoryManager {
                 }
             }
         }
+
+        if (itemsProcessable.isEmpty()){
+
+        }
+
     }
     // Used with "calcInventoryRemain()"
     private void calcInventoryStoreResult(MenuInventory foodItem, int... result){

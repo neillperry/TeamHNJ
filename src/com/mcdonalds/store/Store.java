@@ -101,7 +101,6 @@ public class Store {
 
     // BUSINESS METHODS
     // This is for the inventory system
-    // TODO - need to test by calling this method from GUI when it startsup
     public void initializeInventory(int initialInventory) {
         this.initialInventory = initialInventory;
         inventMng.setInventoryData(initialInventory);
@@ -109,11 +108,10 @@ public class Store {
 
     public boolean checkIfOrderProcessable(Order order) {
         boolean returnValue = false;
-        // TODO - need to test if it works with the condition of multiple ordering
         inventMng.clearData(); // Clear ordered item data and temporary storage for the inventory system
 
         //---------- Integration of Inventory system ----------
-        // Orverview
+        // Overview
         // 1. Extract ordered item data from "order.getFoodItems()"
         // 2. Count how many of each items are ordered
         // 3. Store the counts into inventory system
