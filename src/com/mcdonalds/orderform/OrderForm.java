@@ -509,27 +509,24 @@ public class OrderForm extends JFrame {
         orderButton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                newStore.processOrder(order);
-                feedbackLabel5.setText("ORDER PLACED!!!");
-                feedbackLabel5.setVisible(true);
-                readyLabel.setText("Your Order Will Be Ready Soon!");
-                readyLabel.setVisible(true);
-                timerLabel.setVisible(true);
-                orderReviewTextArea.append(
-                        newLine +
-                        "TOTAL PRICE: " +
-                                dollarSign +
-                                space +
-                                String.format(decimalFormat, totalPrice) +
-                                newLine +
-                        "Order Number: " +
-                                "#" +
-                                space +
-                                String.valueOf(order.getOrderNumber()) +
-                                newLine
-                );
-                timer.setInitialDelay(0);
-                timer.start();
+                if (newStore.checkIfOrderProcessable(order)) {
+                    newStore.processOrder(order);
+                    orderReviewTextArea.append(createFinalPriceBreakdown(order));
+
+                    feedbackLabel5.setText("ORDER PLACED!!!");
+                    feedbackLabel5.setVisible(true);
+                    readyLabel.setText("Your Order Will Be Ready Soon!");
+                    readyLabel.setVisible(true);
+
+                    timerLabel.setVisible(true);
+                    timer.setInitialDelay(0);
+                    timer.start();
+                } else {
+                    feedbackLabel5.setText("ERROR: Insufficient Inventory!!");
+                    feedbackLabel5.setVisible(true);
+                    readyLabel.setText("Please Order Less Food!");
+                    readyLabel.setVisible(true);
+                }
                 createNewOrder();
             }
         });
@@ -590,17 +587,17 @@ public class OrderForm extends JFrame {
                 "SUB TOTAL: " +
                 dollarSign +
                 space +
+                String.format(decimalFormat, order.getSubTotalPrice()) +
                 newLine +
-                String.format(decimalFormat, order.getTotalPrice()) +
                 "TAXES: " +
                 dollarSign +
                 space +
-                String.format(decimalFormat, order.getTotalPrice()) +
+                String.format(decimalFormat, order.getTax()) +
                 newLine +
                 "TOTAL PRICE: " +
                 dollarSign +
                 space +
-                String.format(decimalFormat, order.getTotalPrice()) +
+                String.format(decimalFormat, order.getFinalPrice()) +
                 newLine +
                 "Order Number: " +
                 "#" +

@@ -71,7 +71,7 @@ public class Store {
     }
 
     // BUSINESS METHODS
-    public void clearOrder(Order order) {
+    public void processOrder(Order order) {
         order.setOrderNumber(createOrderNumber());
         collectMoney(order);
         placedOrders.add(order);
@@ -83,17 +83,15 @@ public class Store {
     }
 
     public void collectMoney(Order order) {
-        order.calculateTotalPrice();
-        double taxOnOrder = calculateTaxesOwed(order);
-        collectedSalesTaxes += taxOnOrder;
-        order.setTax(taxOnOrder);
-        storeRevenue += order.getTotalPrice() + taxOnOrder;
+        order.calculateSubTotalPrice();
+        calculateTaxesOwed(order);
+        storeRevenue += order.getFinalPrice();
     }
 
-    public double calculateTaxesOwed(Order order) {
-        double taxes = order.getTotalPrice() * TAXRATE;
+    public void calculateTaxesOwed(Order order) {
+        double taxes = order.getSubTotalPrice() * TAXRATE;
+        collectedSalesTaxes += taxes;
         order.setTax(taxes);
-        return taxes;
     }
 
     public int createOrderNumber() {
@@ -109,8 +107,8 @@ public class Store {
         inventMng.setInventoryData(initialInventory);
     }
 
-    public void processOrder(Order order) {
-
+    public boolean checkIfOrderProcessable(Order order) {
+        boolean returnValue = false;
         // TODO - need to test if it works with the condition of multiple ordering
         inventMng.clearData(); // Clear ordered item data and temporary storage for the inventory system
 
@@ -452,9 +450,11 @@ public class Store {
         displayCurrentInventory();
 
         ///////////////////////////////////////////////////////////
-        order.setOrderNumber(createOrderNumber());
-        collectMoney(order);
-        placedOrders.add(order);
+        if (statusOrderProcessable == 2) {
+            returnValue = true;
+        }
+
+        return returnValue;
     }
 
     // Works with Inventory System (processOrder()) - Display the count of requested orders

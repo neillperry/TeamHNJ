@@ -12,7 +12,7 @@ public class Order {
     private Store mainStore;
     private User customer;
     private Collection<FoodItem> foodItems;
-    private Double totalPrice = 0.0;
+    private double subTotalPrice = 0.0;
     private double tax = 0.0;
     private int orderNumber;
     private boolean isComplete = false;
@@ -41,8 +41,8 @@ public class Order {
         return foodItems;
     }
 
-    public Double getTotalPrice() {
-        return totalPrice;
+    public Double getSubTotalPrice() {
+        return subTotalPrice;
     }
 
     public void setOrderNumber(int orderNumber) {
@@ -61,9 +61,13 @@ public class Order {
 
     public void setTax(double calculatedTax) {this.tax = calculatedTax; }
 
-    public void calculateTotalPrice() {
+    public double getTax() { return this.tax; }
+
+    public double getFinalPrice() { return this.tax + this.subTotalPrice; }
+
+    public void calculateSubTotalPrice() {
         for (FoodItem food : foodItems) {
-            totalPrice += food.getPrice();
+            subTotalPrice += food.getPrice();
         }
     }
 

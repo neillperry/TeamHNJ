@@ -79,11 +79,11 @@ public class OrderTest extends TestCase {
     }
 
     public void testCalculatePrice() {
-        firstOrder.calculateTotalPrice();
-        secondOrder.calculateTotalPrice();
-        thirdOrder.calculateTotalPrice();
-        assertEquals(344.5, firstOrder.getTotalPrice(), 0.01);
-        assertEquals(57.5, secondOrder.getTotalPrice(), 0.01);
-        assertEquals(0.0, thirdOrder.getTotalPrice(), 0.01);
+        firstOrder.calculateSubTotalPrice();
+        secondOrder.calculateSubTotalPrice();
+        thirdOrder.calculateSubTotalPrice();
+        assertEquals(344.5, firstOrder.getSubTotalPrice(), 0.01);
+        assertEquals(57.5, secondOrder.getSubTotalPrice(), 0.01);
+        assertEquals(0.0, thirdOrder.getSubTotalPrice(), 0.01);
     }
 }

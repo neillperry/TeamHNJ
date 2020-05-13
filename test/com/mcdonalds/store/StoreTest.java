@@ -86,16 +86,16 @@ public class StoreTest extends TestCase {
     }
 
     public void testClearOrders() {
-        newStore.clearOrder(firstOrder);
-        newStore.clearOrder(secondOrder);
-        newStore.clearOrder(thirdOrder);
+        newStore.processOrder(firstOrder);
+        newStore.processOrder(secondOrder);
+        newStore.processOrder(thirdOrder);
         Collection<Order> placedOrders = newStore.getPlacedOrders();
         assertEquals(3, placedOrders.size());
     }
 
     public void testCreateOrderNumber() {
-        newStore.clearOrder(firstOrder);
-        newStore.clearOrder(secondOrder);
+        newStore.processOrder(firstOrder);
+        newStore.processOrder(secondOrder);
         assertTrue(firstOrder.getOrderNumber() > 100);
         assertTrue(secondOrder.getOrderNumber() > 100);
     }
@@ -117,22 +117,22 @@ public class StoreTest extends TestCase {
     }
 
     public void testCalculateSalesTax() {
-        newStore.clearOrder(firstOrder);
+        newStore.processOrder(firstOrder);
         assertEquals(68.9, newStore.getCollectedSalesTax(), 0.01);
     }
 
     public void testCalculateSalesTaxZero() {
-        newStore.clearOrder(thirdOrder);
+        newStore.processOrder(thirdOrder);
         assertEquals(0.0, newStore.getCollectedSalesTax(), 0.01);
     }
 
     public void testCollectMoney() {
-        newStore.clearOrder(firstOrder);
+        newStore.processOrder(firstOrder);
         assertEquals(413.4, newStore.getCollectedRevenue(), 0.01);
     }
 
     public void testCollectMoneyZero() {
-        newStore.clearOrder(thirdOrder);
+        newStore.processOrder(thirdOrder);
         assertEquals(0.0, newStore.getCollectedRevenue(), 0.01);
     }
 
