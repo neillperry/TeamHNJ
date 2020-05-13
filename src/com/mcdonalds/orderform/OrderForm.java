@@ -603,6 +603,7 @@ public class OrderForm extends JFrame {
                 space +
                 String.format(decimalFormat, order.getFinalPrice()) +
                 newLine +
+                newLine + 
                 "Order Number: " +
                 "#" +
                 space +
