@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/orderform/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/orderform/OrderForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/Water.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/Water.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/alligatorBites.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/alligatorBites.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/applePie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/applePie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/apples.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/apples.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/birthdayCake.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/birthdayCake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/cheeseburger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/chickenSandwich.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/chickenSandwich.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/chieckenNuggets.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/chieckenNuggets.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/coke.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/coke.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/cookie.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/cookie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/dietCoke.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/dietCoke.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/fries.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/fries.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/iceCream.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/iceCream.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/mozerallaSticks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/mozerallaSticks.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/orings.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/orings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/salad.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/salad.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/shrimpTaco.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/shrimpTaco.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/sprite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/taterTots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/taterTots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Project/weller.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/resources/weller.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
