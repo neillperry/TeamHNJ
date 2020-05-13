@@ -509,7 +509,7 @@ public class OrderForm extends JFrame {
         orderButton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                newStore.clearOrder(order);
+                newStore.processOrder(order);
                 feedbackLabel5.setText("ORDER PLACED!!!");
                 feedbackLabel5.setVisible(true);
                 readyLabel.setText("Your Order Will Be Ready Soon!");
@@ -573,7 +573,7 @@ public class OrderForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 count--;
-                if (count > 1) {
+                if (count > 0) {
                     int minutes = count / 60;
                     int seconds = count % 60;
                     timerLabel.setText(String.format("%d:%02d", minutes, seconds));

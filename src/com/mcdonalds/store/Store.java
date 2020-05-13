@@ -42,6 +42,7 @@ public class Store {
         users = new ArrayList<>() {};
         placedOrders = new ArrayList<>() {};
         completedOrders = new ArrayList<>() {};
+        initializeInventory(initialInventory);
     }
 
     // ACCESSOR / SETTOR METHODS
@@ -83,8 +84,10 @@ public class Store {
 
     public void collectMoney(Order order) {
         order.calculateTotalPrice();
-        collectedSalesTaxes += calculateTaxesOwed(order);
-        storeRevenue += order.getTotalPrice() + collectedSalesTaxes;
+        double taxOnOrder = calculateTaxesOwed(order);
+        collectedSalesTaxes += taxOnOrder;
+        order.setTax(taxOnOrder);
+        storeRevenue += order.getTotalPrice() + taxOnOrder;
     }
 
     public double calculateTaxesOwed(Order order) {
@@ -449,10 +452,8 @@ public class Store {
         displayCurrentInventory();
 
         ///////////////////////////////////////////////////////////
-
         order.setOrderNumber(createOrderNumber());
-        collectedSalesTaxes += order.getTotalPrice() * TAXRATE;
-        storeRevenue += order.getTotalPrice();
+        collectMoney(order);
         placedOrders.add(order);
     }
 
