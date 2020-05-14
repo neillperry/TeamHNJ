@@ -120,6 +120,7 @@ public class OrderForm extends JFrame {
     ImageIcon saladImage;
     ImageIcon mozzarellaImage;
     ImageIcon applePieImage;
+    ImageIcon cookieImage;
     ImageIcon iceCreamImage;
     ImageIcon birthdayCakeImage;
     ImageIcon cokeImage;
@@ -201,9 +202,6 @@ public class OrderForm extends JFrame {
         URL shrimpTacoURL = ClassLoader.getSystemResource("shrimpTacos.jpeg");
         shrimpTacoImage = new ImageIcon(shrimpTacoURL);
 
-        URL applePieURL = ClassLoader.getSystemResource("applePie.jpg");
-        applePieImage= new ImageIcon(applePieURL);
-
         URL applesURL = ClassLoader.getSystemResource("apples.png");
         applesImage= new ImageIcon(applesURL);
 
@@ -213,14 +211,26 @@ public class OrderForm extends JFrame {
         URL mozzerellaURL = ClassLoader.getSystemResource("mozzarellaSticks.jpeg");
         mozzarellaImage = new ImageIcon(mozzerellaURL);
 
+        URL saladURL = ClassLoader.getSystemResource("salad.jpg");
+        saladImage = new ImageIcon(saladURL);
+
+        URL taterTotsURL = ClassLoader.getSystemResource("taterTots.jpg");
+        taterTotsImage = new ImageIcon(taterTotsURL);
+
+        URL onionRingsURL = ClassLoader.getSystemResource("orings.png");
+        oringsImage = new ImageIcon(onionRingsURL);
+
         URL iceCreamURL = ClassLoader.getSystemResource("iceCream.jpg");
         iceCreamImage = new ImageIcon(iceCreamURL);
 
         URL birthdayCakeURL = ClassLoader.getSystemResource("birthdayCake.png");
         birthdayCakeImage = new ImageIcon(birthdayCakeURL);
 
-        URL saladURL = ClassLoader.getSystemResource("salad.jpg");
-        saladImage = new ImageIcon(saladURL);
+        URL cookieURL = ClassLoader.getSystemResource("cookie.jpeg");
+        cookieImage = new ImageIcon(cookieURL);
+
+        URL applePieURL = ClassLoader.getSystemResource("applePie.jpg");
+        applePieImage= new ImageIcon(applePieURL);
 
         URL cokeURL = ClassLoader.getSystemResource("coke.jpg");
         cokeImage = new ImageIcon(cokeURL);
@@ -230,12 +240,6 @@ public class OrderForm extends JFrame {
 
         URL spriteURL = ClassLoader.getSystemResource("sprite.jpeg");
         spriteImage = new ImageIcon(spriteURL);
-
-        URL taterTotsURL = ClassLoader.getSystemResource("taterTots.jpg");
-        taterTotsImage = new ImageIcon(taterTotsURL);
-
-        URL onionRingsURL = ClassLoader.getSystemResource("orings.png");
-        oringsImage = new ImageIcon(onionRingsURL);
 
         URL waterURL = ClassLoader.getSystemResource("water.jpeg");
         waterImage = new ImageIcon(waterURL);
@@ -426,9 +430,10 @@ public class OrderForm extends JFrame {
         dessertSelBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (dessertSelBox.getSelectedIndex() != 0) {
+                int selectedItem = dessertSelBox.getSelectedIndex();
+                if (selectedItem != 0) {
                     feedbackLabel3.setVisible(false);
-                    logoLabel3.setIcon(iceCreamImage);
+                    logoLabel3.setIcon(setDessertImage(selectedItem));
                 }
             }
         });
@@ -722,7 +727,7 @@ public class OrderForm extends JFrame {
     private ImageIcon setBurgerImage(int selectedItem) {
         switch(selectedItem) {
             case 1:
-                return mcdonaldsImage;
+                return cheeseBurgerImage;
             case 2:
                 return cheeseBurgerImage;
             case 3:
@@ -753,6 +758,23 @@ public class OrderForm extends JFrame {
                 return mcdonaldsImage;
         }
     }
+
+
+    private ImageIcon setDessertImage(int selectedItem) {
+        switch(selectedItem) {
+            case 1:
+                return applePieImage;
+            case 2:
+                return iceCreamImage;
+            case 3:
+                return cookieImage;
+            case 4:
+                return birthdayCakeImage;
+            default:
+                return mcdonaldsImage;
+        }
+    }
+
 
     private ImageIcon setDrinkImage(int selectedItem) {
         switch(selectedItem) {
