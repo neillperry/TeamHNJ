@@ -107,6 +107,20 @@ public class OrderForm extends JFrame {
     private int count = 120;
     private Timer timer;
 
+    // Images
+    ImageIcon mcdonaldsImage;
+    ImageIcon applePieImage;
+    ImageIcon applesImage;
+    ImageIcon cokeImage;
+    ImageIcon friesImage;
+    ImageIcon iceCreamImage;
+    ImageIcon birthdayCakeImage;
+    ImageIcon saladImage;
+    ImageIcon spriteImage;
+    ImageIcon taterTotsImage;
+    ImageIcon oringsImage;
+
+
 
     public static void main(String[] args) {
         // Creates the GUI interface
@@ -127,29 +141,13 @@ public class OrderForm extends JFrame {
     // create UI Components of the Order Form
     private void createUIComponents() {
         createComboBoxes();
-        createImageIcons();
+        instantiateImageIcons();
+        assignImageIcons();
         addOrderButtonListeners();
         addSizeBoxListeners();
         addSelBoxListeners();
         createTimer();
         createFeedbackLabels();
-    }
-
-    private void createImageIcons() {
-        URL imageURL = ClassLoader.getSystemResource("mcDonaldLogo.jpg");
-        ImageIcon mcdonaldsImage = new ImageIcon(imageURL);
-
-        logoLabel1.setIcon(mcdonaldsImage);
-        logoLabel1.setVisible(true);
-
-        logoLabel2.setIcon(mcdonaldsImage);
-        logoLabel2.setVisible(true);
-
-        logoLabel3.setIcon(mcdonaldsImage);
-        logoLabel3.setVisible(true);
-
-        logoLabel4.setIcon(mcdonaldsImage);
-        logoLabel4.setVisible(true);
     }
 
     private void createComboBoxes(){
@@ -159,7 +157,6 @@ public class OrderForm extends JFrame {
         createDrinkBox();
         createFinalPanel();
     }
-
 
 
     private void createFeedbackLabels() {
@@ -178,6 +175,55 @@ public class OrderForm extends JFrame {
 
         feedbackLabel5.setVisible(false);
         reviewOrderLabel.setForeground(Color.BLUE);
+    }
+
+    private void instantiateImageIcons() {
+        URL mcdonaldsURL = ClassLoader.getSystemResource("mcDonaldLogo.jpg");
+        mcdonaldsImage = new ImageIcon(mcdonaldsURL);
+
+        URL applePieURL = ClassLoader.getSystemResource("applePie.jpg");
+        applePieImage= new ImageIcon(applePieURL);
+
+        URL applesURL = ClassLoader.getSystemResource("apples.png");
+        applesImage= new ImageIcon(applesURL);
+
+        URL cokeURL = ClassLoader.getSystemResource("coke.jpg");
+        cokeImage = new ImageIcon(cokeURL);
+
+        URL friesURL = ClassLoader.getSystemResource("fries.png");
+        friesImage = new ImageIcon(friesURL);
+
+        URL iceCreamURL = ClassLoader.getSystemResource("iceCream.jpg");
+        iceCreamImage = new ImageIcon(iceCreamURL);
+
+        URL birthdayCakeURL = ClassLoader.getSystemResource("birthdayCake.png");
+        birthdayCakeImage = new ImageIcon(birthdayCakeURL);
+
+        URL saladURL = ClassLoader.getSystemResource("salad.jpg");
+        saladImage = new ImageIcon(saladURL);
+
+        URL spriteURL = ClassLoader.getSystemResource("sprite.png");
+        spriteImage = new ImageIcon(spriteURL);
+
+        URL taterTotsURL = ClassLoader.getSystemResource("taterTots.jpg");
+        taterTotsImage = new ImageIcon(taterTotsURL);
+
+        URL onionRingsURL = ClassLoader.getSystemResource("orings.png");
+        oringsImage = new ImageIcon(onionRingsURL);
+    }
+
+    private void assignImageIcons() {
+        logoLabel1.setIcon(mcdonaldsImage);
+        logoLabel1.setVisible(true);
+
+        logoLabel2.setIcon(mcdonaldsImage);
+        logoLabel2.setVisible(true);
+
+        logoLabel3.setIcon(mcdonaldsImage);
+        logoLabel3.setVisible(true);
+
+        logoLabel4.setIcon(mcdonaldsImage);
+        logoLabel4.setVisible(true);
     }
 
     private void createBurgerBox() {
@@ -272,6 +318,7 @@ public class OrderForm extends JFrame {
     private void createFinalPanel() {
         timerLabel.setVisible(false);
         readyLabel.setVisible(false);
+        orderReviewTextArea.setEditable(false);
     }
 
     // Hide Feeedback Label when Size Box is set to != first element
