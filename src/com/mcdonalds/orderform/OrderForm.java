@@ -166,7 +166,6 @@ public class OrderForm extends JFrame {
         createFinalPanel();
     }
 
-
     private void createFeedbackLabels() {
         feedbackLabel1.setVisible(false);
         feedbackLabel1.setForeground(Color.GREEN);
