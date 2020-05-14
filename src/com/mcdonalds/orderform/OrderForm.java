@@ -109,16 +109,24 @@ public class OrderForm extends JFrame {
 
     // Images
     ImageIcon mcdonaldsImage;
-    ImageIcon applePieImage;
+    ImageIcon chickenSandwichImage;
+    ImageIcon chickenNuggetsImage;
+    ImageIcon shrimpTacoImage;
+    ImageIcon cheeseBurgerImage;
     ImageIcon applesImage;
-    ImageIcon cokeImage;
+    ImageIcon taterTotsImage;
     ImageIcon friesImage;
+    ImageIcon oringsImage;
+    ImageIcon saladImage;
+    ImageIcon mozzarellaImage;
+    ImageIcon applePieImage;
     ImageIcon iceCreamImage;
     ImageIcon birthdayCakeImage;
-    ImageIcon saladImage;
+    ImageIcon cokeImage;
+    ImageIcon dietCokeImage;
     ImageIcon spriteImage;
-    ImageIcon taterTotsImage;
-    ImageIcon oringsImage;
+    ImageIcon adultBeverageImage;
+    ImageIcon waterImage;
 
 
 
@@ -181,17 +189,29 @@ public class OrderForm extends JFrame {
         URL mcdonaldsURL = ClassLoader.getSystemResource("mcDonaldLogo.jpg");
         mcdonaldsImage = new ImageIcon(mcdonaldsURL);
 
+        URL cheeseBurgerURL = ClassLoader.getSystemResource("cheeseburger.jpeg");
+        cheeseBurgerImage = new ImageIcon(cheeseBurgerURL);
+
+        URL chickenSandwichURL = ClassLoader.getSystemResource("chickenSandwich.jpg");
+        chickenSandwichImage = new ImageIcon(chickenSandwichURL);
+
+        URL chickenNuggetsURL = ClassLoader.getSystemResource("chickenNuggets.jpg");
+        chickenNuggetsImage = new ImageIcon(chickenNuggetsURL);
+
+        URL shrimpTacoURL = ClassLoader.getSystemResource("shrimpTacos.jpeg");
+        shrimpTacoImage = new ImageIcon(shrimpTacoURL);
+
         URL applePieURL = ClassLoader.getSystemResource("applePie.jpg");
         applePieImage= new ImageIcon(applePieURL);
 
         URL applesURL = ClassLoader.getSystemResource("apples.png");
         applesImage= new ImageIcon(applesURL);
 
-        URL cokeURL = ClassLoader.getSystemResource("coke.jpg");
-        cokeImage = new ImageIcon(cokeURL);
-
-        URL friesURL = ClassLoader.getSystemResource("fries.png");
+        URL friesURL = ClassLoader.getSystemResource("fries.jpg");
         friesImage = new ImageIcon(friesURL);
+
+        URL mozzerellaURL = ClassLoader.getSystemResource("mozzarellaSticks.jpeg");
+        mozzarellaImage = new ImageIcon(mozzerellaURL);
 
         URL iceCreamURL = ClassLoader.getSystemResource("iceCream.jpg");
         iceCreamImage = new ImageIcon(iceCreamURL);
@@ -202,7 +222,13 @@ public class OrderForm extends JFrame {
         URL saladURL = ClassLoader.getSystemResource("salad.jpg");
         saladImage = new ImageIcon(saladURL);
 
-        URL spriteURL = ClassLoader.getSystemResource("sprite.png");
+        URL cokeURL = ClassLoader.getSystemResource("coke.jpg");
+        cokeImage = new ImageIcon(cokeURL);
+
+        URL dietCokeURL = ClassLoader.getSystemResource("dietCoke.jpeg");
+        dietCokeImage = new ImageIcon(dietCokeURL);
+
+        URL spriteURL = ClassLoader.getSystemResource("sprite.jpeg");
         spriteImage = new ImageIcon(spriteURL);
 
         URL taterTotsURL = ClassLoader.getSystemResource("taterTots.jpg");
@@ -210,6 +236,12 @@ public class OrderForm extends JFrame {
 
         URL onionRingsURL = ClassLoader.getSystemResource("orings.png");
         oringsImage = new ImageIcon(onionRingsURL);
+
+        URL waterURL = ClassLoader.getSystemResource("water.jpeg");
+        waterImage = new ImageIcon(waterURL);
+
+        URL adultBeverageURL = ClassLoader.getSystemResource("adultBeverage.jpeg");
+        adultBeverageImage = new ImageIcon(adultBeverageURL);
     }
 
     private void assignImageIcons() {
@@ -364,14 +396,16 @@ public class OrderForm extends JFrame {
         });
     }
 
-    // Hide Feeedback Label when Size Box is set to != first element
+    // Hide Feeedback Label when Selection Box is set to != first element
     private void addSelBoxListeners() {
         // ENTREES
         burgerSelBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (burgerSelBox.getSelectedIndex() != 0) {
+                int selectedItem = burgerSelBox.getSelectedIndex();
+                if (selectedItem != 0) {
                     feedbackLabel1.setVisible(false);
+                    logoLabel1.setIcon(setBurgerImage(selectedItem));
                 }
             }
         });
@@ -380,8 +414,10 @@ public class OrderForm extends JFrame {
         sideSelBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (sideSelBox.getSelectedIndex() != 0) {
+                int selectedItem = sideSelBox.getSelectedIndex();
+                if (selectedItem != 0) {
                     feedbackLabel2.setVisible(false);
+                    logoLabel2.setIcon(setSideImage(selectedItem));
                 }
             }
         });
@@ -392,6 +428,7 @@ public class OrderForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (dessertSelBox.getSelectedIndex() != 0) {
                     feedbackLabel3.setVisible(false);
+                    logoLabel3.setIcon(iceCreamImage);
                 }
             }
         });
@@ -400,8 +437,10 @@ public class OrderForm extends JFrame {
         drinkSelBox.addActionListener(new ActionListener () {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (drinkSelBox.getSelectedIndex() != 0) {
+                int selectedItem = drinkSelBox.getSelectedIndex();
+                if (selectedItem != 0) {
                     feedbackLabel4.setVisible(false);
+                    logoLabel4.setIcon(setDrinkImage(selectedItem));
                 }
             }
         });
@@ -678,5 +717,59 @@ public class OrderForm extends JFrame {
                 DrinkType.ADULT_BEVERAGE.type()
         };
     }
+
+
+    private ImageIcon setBurgerImage(int selectedItem) {
+        switch(selectedItem) {
+            case 1:
+                return mcdonaldsImage;
+            case 2:
+                return cheeseBurgerImage;
+            case 3:
+                return chickenSandwichImage;
+            case 4:
+                return chickenNuggetsImage;
+            case 5:
+                return shrimpTacoImage;
+            default:
+                return mcdonaldsImage;
+        }
+    }
+
+
+    private ImageIcon setSideImage(int selectedItem) {
+        switch(selectedItem) {
+            case 1:
+                return friesImage;
+            case 2:
+                return applesImage;
+            case 3:
+                return saladImage;
+            case 4:
+                return oringsImage;
+            case 5:
+                return mozzarellaImage;
+            default:
+                return mcdonaldsImage;
+        }
+    }
+
+    private ImageIcon setDrinkImage(int selectedItem) {
+        switch(selectedItem) {
+            case 1:
+                return cokeImage;
+            case 2:
+                return dietCokeImage;
+            case 3:
+                return spriteImage;
+            case 4:
+                return waterImage;
+            case 5:
+                return adultBeverageImage;
+            default:
+                return cokeImage;
+        }
+    }
+
 }
 
