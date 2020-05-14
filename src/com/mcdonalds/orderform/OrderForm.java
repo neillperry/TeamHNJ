@@ -108,26 +108,26 @@ public class OrderForm extends JFrame {
     private Timer timer;
 
     // Images
-    ImageIcon mcdonaldsImage;
-    ImageIcon chickenSandwichImage;
-    ImageIcon chickenNuggetsImage;
-    ImageIcon shrimpTacoImage;
-    ImageIcon cheeseBurgerImage;
-    ImageIcon applesImage;
-    ImageIcon taterTotsImage;
-    ImageIcon friesImage;
-    ImageIcon oringsImage;
-    ImageIcon saladImage;
-    ImageIcon mozzarellaImage;
-    ImageIcon applePieImage;
-    ImageIcon cookieImage;
-    ImageIcon iceCreamImage;
-    ImageIcon birthdayCakeImage;
-    ImageIcon cokeImage;
-    ImageIcon dietCokeImage;
-    ImageIcon spriteImage;
-    ImageIcon adultBeverageImage;
-    ImageIcon waterImage;
+    private ImageIcon mcdonaldsImage;
+    private ImageIcon chickenSandwichImage;
+    private ImageIcon chickenNuggetsImage;
+    private ImageIcon shrimpTacoImage;
+    private ImageIcon cheeseBurgerImage;
+    private ImageIcon applesImage;
+    private ImageIcon taterTotsImage;
+    private ImageIcon friesImage;
+    private ImageIcon oringsImage;
+    private ImageIcon saladImage;
+    private ImageIcon mozzarellaImage;
+    private ImageIcon applePieImage;
+    private ImageIcon cookieImage;
+    private ImageIcon iceCreamImage;
+    private ImageIcon birthdayCakeImage;
+    private ImageIcon cokeImage;
+    private ImageIcon dietCokeImage;
+    private ImageIcon spriteImage;
+    private ImageIcon adultBeverageImage;
+    private ImageIcon waterImage;
 
 
     public static void main(String[] args) {
