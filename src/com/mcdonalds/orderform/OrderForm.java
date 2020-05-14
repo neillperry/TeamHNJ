@@ -130,7 +130,6 @@ public class OrderForm extends JFrame {
     ImageIcon waterImage;
 
 
-
     public static void main(String[] args) {
         // Creates the GUI interface
         OrderForm form = new OrderForm(welcomeMessage);
@@ -474,6 +473,7 @@ public class OrderForm extends JFrame {
                     // reset the Size Boxes to Zero
                     burgerSizeBox.setSelectedIndex(0);
                     burgerSelBox.setSelectedIndex(0);
+                    logoLabel1.setIcon(setBurgerImage(0));
                     // update and UI
                     feedbackLabel1.setText(itemAdded);
                     feedbackLabel1.setVisible(true);
@@ -503,6 +503,7 @@ public class OrderForm extends JFrame {
                     // reset the Side box values to Zero
                     sideSizeBox.setSelectedIndex(0);
                     sideSelBox.setSelectedIndex(0);
+                    logoLabel2.setIcon(setSideImage(0));
                     //update UI
                     feedbackLabel2.setText(itemAdded);
                     feedbackLabel2.setVisible(true);
@@ -532,6 +533,7 @@ public class OrderForm extends JFrame {
                     // reset Size Box values to Zero
                     dessertSizeBox.setSelectedIndex(0);
                     dessertSelBox.setSelectedIndex(0);
+                    logoLabel3.setIcon(setDessertImage(0));
                     // update UI
                     feedbackLabel3.setText(itemAdded);
                     feedbackLabel3.setVisible(true);
@@ -561,6 +563,7 @@ public class OrderForm extends JFrame {
                     // reset Side Box values to Zero
                     drinkSizeBox.setSelectedIndex(0);
                     drinkSelBox.setSelectedIndex(0);
+                    logoLabel4.setIcon(setDrinkImage(0));
                     // update UI
                     feedbackLabel4.setText(itemAdded);
                     feedbackLabel4.setVisible(true);
@@ -726,6 +729,8 @@ public class OrderForm extends JFrame {
 
     private ImageIcon setBurgerImage(int selectedItem) {
         switch(selectedItem) {
+            case 0:
+                return mcdonaldsImage;
             case 1:
                 return cheeseBurgerImage;
             case 2:
@@ -744,6 +749,8 @@ public class OrderForm extends JFrame {
 
     private ImageIcon setSideImage(int selectedItem) {
         switch(selectedItem) {
+            case 0:
+                return mcdonaldsImage;
             case 1:
                 return friesImage;
             case 2:
@@ -762,6 +769,8 @@ public class OrderForm extends JFrame {
 
     private ImageIcon setDessertImage(int selectedItem) {
         switch(selectedItem) {
+            case 0:
+                return mcdonaldsImage;
             case 1:
                 return applePieImage;
             case 2:
@@ -778,6 +787,8 @@ public class OrderForm extends JFrame {
 
     private ImageIcon setDrinkImage(int selectedItem) {
         switch(selectedItem) {
+            case 0:
+                return mcdonaldsImage;
             case 1:
                 return cokeImage;
             case 2:
