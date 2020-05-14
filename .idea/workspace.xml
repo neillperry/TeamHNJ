@@ -7,17 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dda63c91-94f1-486a-9241-c215a54b1581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/mcdonalds/inventory/TestAdvanceEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/mcdonalds/inventory/TestInventoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TeamHNJ.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TeamHNJ.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/inventory/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/inventory/InventoryManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/store/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/TeamHNJ/com/mcdonalds/store/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/inventory/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/inventory/InventoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mcdonalds/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcdonalds/store/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TeamHNJ/com/mcdonalds/inventory/InventoryManagerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/mcdonalds/inventory/InventoryManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,10 +176,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.OrderForm (1)" />
-      <item itemvalue="JUnit.DrinkTest" />
-      <item itemvalue="JUnit.StoreTest" />
-      <item itemvalue="JUnit.InventoryManagerTest" />
       <item itemvalue="JUnit.AdvanceEnumTest" />
+      <item itemvalue="JUnit.DrinkTest" />
+      <item itemvalue="JUnit.InventoryManagerTest" />
+      <item itemvalue="JUnit.StoreTest" />
       <item itemvalue="JUnit.TestAdvanceEnum" />
       <item itemvalue="JUnit.TestInventoryManager" />
     </list>
